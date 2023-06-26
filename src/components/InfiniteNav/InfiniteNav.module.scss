@@ -1,0 +1,142 @@
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 95%;
+  padding-bottom: 38px;
+}
+.menuItem {
+  padding: 24px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  & a {
+      position: relative;
+      color: var(--color-blue);
+      line-height: 41px;
+        font-weight: 700;
+        font-size: 57px;
+      touch-action: manipulation;
+      width: 100%;
+  }
+  
+}
+.menuItemAnim {
+  position: absolute;
+  top: -2%;
+  visibility: hidden;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 44px;
+  line-height: 53px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  z-index: 1;
+  overflow: hidden;
+
+}
+
+.menuItem:hover .menuItemAnim {
+  visibility: visible;
+}
+
+.menuItemAnimRail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.menuItemAnimWrap {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 100%;
+  animation: scroll-left linear infinite;
+  animation-duration: 10s;
+}
+
+.menuItemAnimWrapItem {
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+  width: -moz-max-content;
+  width: max-content;
+
+}
+
+.menuSocial {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  & li a {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 20px;
+      color: var(--color-blue);
+  }
+  & li:first-child a {
+      padding-right: 5px;
+      border-right: 2px solid var(--color-blue);
+  }
+  & li:last-child a {
+    padding-left: 5px;
+    
+  }
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateZ(0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.menuToggle {
+  border: 2px solid var(--color-blue);
+  border-radius: 30px;
+  color: var(--color-blue);
+  max-width: 184px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  & span {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+  }
+  & span:has(svg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    flex: inherit;
+    transform: translate(5px, 0px);
+    cursor: pointer;
+    & svg {
+      font-size: 30px;
+      width: 100%;
+    }
+    & path {
+      stroke:var(--color-white);
+    }
+  }
+}
+.menuToggleWrap {
+  padding-top: 70px;
+  flex: 1;
+  padding-right: 70px;
+}
