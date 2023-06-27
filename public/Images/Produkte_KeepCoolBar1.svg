@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="432px" height="324px" viewBox="0 0 432 324" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L432 0L432 324L0 324L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Group-23-Copy">
+    <path d="M0 0L432 0L432 324L0 324L0 0Z" id="Mask" fill="none" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <g id="Group-23-Copy" transform="translate(-23.4 8.1)">
+        <path d="M149.985 111.473L409.2 0L330.399 83.9933L66 190.8L149.985 111.473Z" id="Stroke-5" fill="none" fill-rule="evenodd" stroke="#F2F0DC" stroke-width="0.6" />
+        <path d="M409.252 0.3L413.4 6.51444L334.587 90.4141L70.1479 197.1L66 190.886" id="Stroke-7" fill="none" fill-rule="evenodd" stroke="#F2F0DC" stroke-width="0.6" />
+        <path d="M246.3 748.185L246.3 126L227.7 133.528L227.7 748.2C231.443 748.183 235.205 748.173 238.99 748.173C241.436 748.173 243.871 748.178 246.3 748.185Z" id="Stroke-9" fill="none" fill-rule="evenodd" stroke="#F2F0DC" stroke-width="0.6" />
+        <path d="M478.5 790.8L478.5 772.164C478.5 759.158 375.323 748.569 246.583 748.181L246.583 126L227.926 133.528L227.926 748.196C101.05 748.789 0 759.292 0 772.164L0 790.8" id="Stroke-11" fill="none" fill-rule="evenodd" stroke="#F2F0DC" stroke-width="0.6" />
+        <path d="M330.6 84L334.8 90.3" id="Stroke-13" fill="none" fill-rule="evenodd" stroke="#F2F0DC" stroke-width="0.6" />
+      </g>
+    </g>
+  </g>
+</svg>
