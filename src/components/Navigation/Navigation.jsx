@@ -12,17 +12,12 @@ const Navigation = () => {
 
   return (
     <div className={styles.navWrap}>
-      {!menuActive && (
-        <div className={styles.navUse}>
-          <LanguageChoose />
-          <p
-            className={styles.menuM}
-            onClick={() => setActive((prev) => !prev)}
-          >
-            M
-          </p>
-        </div>
-      )}
+      <div className={!menuActive ? `${styles.navUse} ${styles.navUseActive}` : styles.navUse}>
+        <LanguageChoose />
+        <p className={styles.menuM} onClick={() => setActive((prev) => !prev)}>
+          M
+        </p>
+      </div>
 
       <AnimatePresence>
         {menuActive && (

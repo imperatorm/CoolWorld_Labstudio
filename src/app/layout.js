@@ -1,6 +1,7 @@
 import TheHeader from '@/components/TheHeader/TheHeader';
 import './globals.css'
 import localFont from "next/font/local";
+import Script from 'next/script'
 
 const replica = localFont({
   src: [
@@ -70,8 +71,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={replica.className}>
-          <TheHeader />
-          <main>{children}</main>
+        <TheHeader />
+        <main>{children}</main>
+        <Script
+          src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"
+          
+        />
+
+        <Script src="js/imagesloaded.pkgd.min.js"  />
+        <Script src="js/gsap.min.js"  />
+        <Script src="js/ScrollTrigger.min.js"  />
+        <Script src="js/lenis.min.js"  />
+        <Script src="js/index.js" type="module" ></Script>
       </body>
     </html>
   );
