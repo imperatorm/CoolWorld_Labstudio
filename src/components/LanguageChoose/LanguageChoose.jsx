@@ -24,8 +24,7 @@ const langData = [
 const LanguageChoose = () => {
   const [langChoose, setLangChoose] = useState(langData);
   const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
-  // const [choose,setChoose] = 
-  console.log('isHovered :', isHovered);
+;
   
   const handleClick = useCallback((id) => {
     const newLang = langChoose.map(item => {

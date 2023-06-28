@@ -22,10 +22,9 @@ const Trail = ({ open, children }) => {
   );
 };
 const TitleAnimation = () => {
-  // const [open, set] = useState(true);
   return (
     <div className={styles.container}>
-      <Trail open={open}>
+      <Trail >
         <span>Keep</span>
         <span className={styles.secondTitle}>Cool.</span>
         <span className={styles.descTitle}>Enjoy the Summer.</span>
