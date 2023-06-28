@@ -12,9 +12,18 @@ const Navigation = () => {
 
   return (
     <div className={styles.navWrap}>
-      <div className={!menuActive ? `${styles.navUse} ${styles.navUseActive}` : styles.navUse}>
+      <div
+        className={
+          !menuActive
+            ? `${styles.navUse} ${styles.navUseActive}`
+            : styles.navUse
+        }
+      >
         <LanguageChoose />
-        <p className={styles.menuM} onClick={() => setActive((prev) => !prev)}>
+        <p
+          className={"hbtn hb-fill-left"}
+          onClick={() => setActive((prev) => !prev)}
+        >
           M
         </p>
       </div>

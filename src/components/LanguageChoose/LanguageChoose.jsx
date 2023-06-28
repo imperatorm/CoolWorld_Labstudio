@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useCallback, useState } from "react";
 import styles from "./LanguageChoose.module.scss";
 import useHover from "@/hooks/useHover";
@@ -24,18 +24,16 @@ const langData = [
 const LanguageChoose = () => {
   const [langChoose, setLangChoose] = useState(langData);
   const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
-;
-  
   const handleClick = useCallback((id) => {
-    const newLang = langChoose.map(item => {
-      if(item.id === id) {
-        return {...item, isActive:true}
+    const newLang = langChoose.map((item) => {
+      if (item.id === id) {
+        return { ...item, isActive: true };
       } else {
         return { ...item, isActive: false };
       }
-    })
+    });
     setLangChoose(newLang);
-    handleMouseLeave()
+    handleMouseLeave();
   }, []);
   return (
     <div
@@ -47,7 +45,7 @@ const LanguageChoose = () => {
           if (!lang.isActive) {
             return (
               <p
-                className={styles.langItem}
+                className={styles.langItemOther}
                 onClick={() => handleClick(lang.id)}
                 key={lang.id}
               >
@@ -61,7 +59,7 @@ const LanguageChoose = () => {
         if (lang.isActive) {
           return (
             <p
-              className={`${styles.langItem} ${styles.langActive}`}
+              className={`${styles.langItem} `}
               onMouseEnter={handleMouseEnter}
               onClick={() => handleClick(lang.id)}
               key={lang.id}

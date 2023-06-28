@@ -6,8 +6,7 @@
   --color-gray: #D8D8D8;
   --color-black: #050000;
   --color-white: #fff;
-  --transition:all 0.3s linear
-
+  --transition: all 0.3s linear
 }
 
 
@@ -66,12 +65,12 @@ button::-moz-focus-inner {
 }
 
 a,
-a:visited {
+/* a:visited {
   display: inline-block;
   all: unset;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
 a:hover {
 
@@ -235,7 +234,7 @@ body #cdawrap {
 
 
 .content {
-  height:876px;
+  height: 876px;
   padding: 0 var(--padding-page);
   position: relative;
   margin-top: 50px;
@@ -256,10 +255,12 @@ body #cdawrap {
   margin-right: auto;
   border-radius: 400px 0 0 400px;
 }
-.content canvas{
-    border-radius: 400px 0 0 400px;
+
+.content canvas {
+  border-radius: 400px 0 0 400px;
 
 }
+
 .no-js .canvas-wrap {
   opacity: 1;
 }
@@ -289,5 +290,55 @@ html.lenis {
 }
 
 .lenis.lenis-scrolling iframe {
-   pointer-events: none;
-} 
+  pointer-events: none;
+}
+
+.hbtn {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 0px 3px 6px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  z-index: 0;
+  border: 2px solid var(--color-milk);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.hb-fill-left::before {
+  position: absolute;
+  content: "";
+  background: var(--color-milk);
+  transition-duration: 0.3s;
+  z-index: -1;
+  inset: 0px 0px auto auto;
+  width: 0px;
+  height: 100%;
+  opacity: 1;
+}
+
+
+.hb-fill-left:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+
+.hb-fill-left:hover {
+  color: var(--color-blue);
+  z-index: 2;
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+}

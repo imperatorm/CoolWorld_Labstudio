@@ -1,24 +1,34 @@
 .langWrap {
-  border: 2px solid var(--color-milk); 
-  border-radius: 30px;
+  border: 2px solid var(--color-milk);
+  border-radius: 40px;
   color: var(--color-milk);
   max-width: 184px;
   width: 100%;
   display: flex;
   align-items: center;
-  
+  overflow: hidden;
+
 }
+
 .langWrapNoActive {
   color: var(--color-milk);
   max-width: 184px;
+  border-radius: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   transition: var(--transition);
   border: 2px solid transparent;
+  overflow: hidden;
 
 }
-.langItem {
+.langItemOther {
+  position: relative;
+    overflow: hidden;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,24 +40,102 @@
     letter-spacing: 0;
     line-height: 22px;
     cursor: pointer;
-    transition: var(--transition);
+   
+    &::before {
+        position: absolute;
+        content: "";
+        background: var(--color-milk);
+        transition-duration: 0.3s;
+        z-index: -1;
+        inset: 0px 0px auto auto;
+        width: 0px;
+        height: 100%;
+        opacity: 1;
+      }
+    
+    
+      &:hover::before {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+      }
+    
+    
+      &:hover {
+        color: var(--color-blue);
+        background: var(--color-milk);
+        transition: color 0.3s ease 0s, background 0s ease 0.3s;
+      }
+}
+.langItem {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 22px;
+  cursor: pointer;
+  z-index: 11;
+  background-color: var(--color-blue);
+  border:2px solid var(--color-milk);
 
-    &:hover {
-      background-color: var(--color-milk);
-      color: var(--color-blue);
-      transition: var(--transition);
-    }
+  &::before {
+    position: absolute;
+    content: "";
+    background: var(--color-milk);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: 0px 0px auto auto;
+    width: 0px;
+    height: 100%;
+    opacity: 1;
   }
+
+
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+
+  &:hover {
+    color: var(--color-blue);
+    background: var(--color-milk);
+    transition: color 0.3s ease 0s, background 0s ease 0.3s;
+  }
+}
+
 .langActive {
   background-color: var(--color-milk);
   color: var(--color-blue);
   transform: translate(5px, 0px);
 }
+
 .langOther {
   display: flex;
   visibility: visible;
+  transform: translate(0, 0);
+  transition: all 1s ease-in-out;
+  & > p {
+    border: none;
+  }
 }
+
 .langOtherNoActive {
   visibility: hidden;
   display: flex;
+  transform: translate(100%, 0);
+  transition: all 1s ease-in-out;
+
 }

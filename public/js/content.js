@@ -22,7 +22,7 @@ export class Content {
 	// visible for a longer time.
 	// Towards the end we don't add many values as 
 	// we want the sharpening up to happen quickly here.
-	pxFactorValues = [1, 2, 4, 9, 100];
+	pxFactorValues = [1, 2, 4, 9, 100,];
 	pxIndex = 0;
 
 	/**
@@ -193,7 +193,7 @@ export class Content {
 				this.render();
 				this.pxIndex++;
 				this.animatePixels();
-			}, this.pxIndex === 0 ? 300 : 80); // The first time should be the longest.
+			}, this.pxIndex === 0 ? 800 : 300); // The first time should be the longest.
 		} 
 		else {
 			this.pxIndex = this.pxFactorValues.length - 1;
