@@ -31,12 +31,12 @@ const Navigation = () => {
       <AnimatePresence>
         {menuActive && (
           <motion.aside
-            initial={{ x: "100%" }}
+            initial={{ y: "-100%" }}
             animate={{
-              x: 0,
+              y: "0",
             }}
             exit={{
-              x: "100%",
+              y: "100%",
             }}
             transition={{ type: "spring", bounce: 0, duration: 0.8 }}
             className={styles.sidebar_aside}

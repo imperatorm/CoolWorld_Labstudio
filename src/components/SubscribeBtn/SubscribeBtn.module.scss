@@ -1,3 +1,6 @@
+
+
+
 .linkWrap {
   position: absolute;
     bottom: 20%;
@@ -5,7 +8,7 @@
 }
 .linkSubs {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   border: 3px solid #4EBFEC;
   border-radius: 16.8px;
   background-color: #F3F1DD;
@@ -18,6 +21,7 @@
   overflow: hidden;
   z-index: 0;
   max-width: 375px;
+  padding-top: 6px;
 
   & span {
     color: #4EBFEC;
@@ -68,4 +72,49 @@
     font-size: 29px;
   }
 
+}
+
+
+.send {
+  animation: launch 1.5s ease-in-out !important
+}
+@keyframes launch {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1)
+  }
+
+  10%,
+  15% {
+    transform: translateX(0) scale(.8)
+  }
+
+  30%,
+  35% {
+    transform: translateX(-20) scale(.8)
+  }
+
+  40%,
+  70% {
+    transform: translateX(50vw) scale(.8)
+  }
+
+  70% {
+    opacity: 1
+  }
+
+  71% {
+    opacity: 0;
+    transform: translateX(50vw) scale(.8)
+  }
+
+  72% {
+    opacity: 0;
+    transform: translateX(0) scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1)
+  }
 }

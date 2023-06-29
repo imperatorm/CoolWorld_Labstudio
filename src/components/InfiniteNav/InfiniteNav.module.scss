@@ -16,7 +16,7 @@
   width: 100%;
   text-align: center;
   cursor: pointer;
-  overflow: hidden;
+  // overflow: hidden;
 
   & a {
     position: relative;
@@ -43,6 +43,10 @@
   color: var(--color-white);
   z-index: 1;
   overflow: hidden;
+  max-width: 414px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
 
 }
 
@@ -78,26 +82,51 @@
 }
 
 .menuSocial {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
-
+  
+  & div {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  & li {
+    transform: scale(1);
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.3s ease;
+    }
+  }
   & li a {
     font-size: 17px;
     font-weight: 700;
     line-height: 20px;
     color: var(--color-blue);
   }
-
-  & li:first-child a {
-    padding-right: 5px;
-    border-right: 2px solid var(--color-blue);
+  & hr {
+    width: 2px;
+    background-color: var(--color-blue);
+    margin: 0 15px;
   }
 
-  & li:last-child a {
-    padding-left: 5px;
+
+  & li a {
 
   }
+}
+
+.wrapAnim {
+  width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    max-width: 380px;
+    margin: 0px auto;
+    right: 9%;
+    border-radius: 32px;
+    min-height: 57px;
 }
 
 @keyframes scroll-left {
@@ -130,7 +159,7 @@
     text-align: center;
   }
 
-  & span:has(svg) {
+  & .closeWrap:has(svg) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,6 +170,7 @@
     flex: inherit;
     outline: 1px solid var(--color-blue);
     cursor: pointer;
+    pointer-events: all;
 
     & svg {
       font-size: 30px;
@@ -178,7 +208,7 @@
     transition: color 0.3s ease 0s, background 0s ease 0.3s;
   }
 
-  &:hover span:has(svg) {
+  &:hover .closeWrap:has(svg) {
 
     background: var(--color-white);
     z-index: 2;

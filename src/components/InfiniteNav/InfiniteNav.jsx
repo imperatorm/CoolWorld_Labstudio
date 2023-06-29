@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./InfiniteNav.module.scss";
 import Link from "next/link";
-import { GrClose } from "react-icons/gr";
 import { TitleAnimationItem } from "../TitleAnimation/TitleAnimation";
 import useHover from "@/hooks/useHover";
+import { Player } from "@lottiefiles/react-lottie-player";
 const InfiniteLoop = ({ text }) => (
   <span className={styles.menuItemAnim}>
     <span className={styles.menuItemAnimRail}>
@@ -26,14 +26,39 @@ const InfiniteLoop = ({ text }) => (
 const InfiniteNav = ({ links, handleActive }) => {
   const pathname = usePathname();
   const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
+  const closeRef = useRef()
+  useEffect(()=> {
+    if(isHovered) {
+      closeRef?.current?.play()
+    } else {
+      closeRef?.current?.stop();
+    }
+  },[isHovered])
   return (
     <>
       <div className={styles.menuToggleWrap}>
-        <div className={styles.menuToggle} onClick={handleActive}>
+        <div className={styles.menuToggle}>
           <span>MENU</span>
-          <span onClick={handleActive} onMouseEnter={handleMouseEnter}>
-            <GrClose onClick={handleActive} />
-          </span>
+          <div
+            className={styles.closeWrap}
+            onClick={handleActive}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            {/* <GrClose onClick={handleActive} /> */}
+            <Player
+              src={
+                "https://assets8.lottiefiles.com/packages/lf20_VlE3maFSHI.json"
+              }
+              onClick={handleActive}
+              ref={closeRef}
+              autoplay={false}
+              // loop={true}
+              keepLastFrame={true}
+              controls={true}
+              style={{ width: "38px", height: "38px" }}
+            ></Player>
+          </div>
         </div>
       </div>
       <ul className={styles.menuItems}>
@@ -48,7 +73,11 @@ const InfiniteNav = ({ links, handleActive }) => {
                   className={isActive ? "active" : ""}
                 >
                   <span>{link.title}</span>
-                  <InfiniteLoop text={link.title} />
+                  <p className={styles.wrapAnim}>
+                    <InfiniteLoop text={link.title} />
+                  </p>
+
+                  
                 </Link>
               </li>
             );
@@ -56,17 +85,19 @@ const InfiniteNav = ({ links, handleActive }) => {
         </TitleAnimationItem>
       </ul>
       <ul className={styles.menuSocial}>
-        <li>
-          <Link href={"https://www.facebook.com/"} target="_blank">
-            Facebook
-          </Link>
-        </li>
-
-        <li>
-          <Link href={"https://www.instagram.com/"} target="_blank">
-            Instagram
-          </Link>
-        </li>
+        <TitleAnimationItem>
+          <li className={styles.firstSocialItem}>
+            <Link href={"https://www.facebook.com/"} target="_blank">
+              Facebook
+            </Link>
+          </li>
+          <hr />
+          <li>
+            <Link href={"https://www.instagram.com/"} target="_blank">
+              Instagram
+            </Link>
+          </li>
+        </TitleAnimationItem>
       </ul>
     </>
   );
