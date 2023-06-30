@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import styles from "./Home.module.scss"
+import VideoScroll from "@/components/VideoScroll/VideoScroll";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         Sprühnebelkühlung. Schaffe eine erfrischende Umgebung, um die Natur und
         deinen Lifestyle auch an den heißesten Tagen zu genießen.
       </h2>
+      <VideoScroll />
     </div>
   );
 }

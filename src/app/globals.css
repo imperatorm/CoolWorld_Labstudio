@@ -9,7 +9,9 @@
   --transition: all 0.3s linear
 }
 
-
+#xoski {
+  position: relative;
+}
 * {
   padding: 0;
   margin: 0;
@@ -370,3 +372,6 @@ html.lenis {
   background: var(--color-blue);
   border-radius: 10px;
 }
+
+
+
