@@ -11,6 +11,7 @@
 
 #xoski {
   position: relative;
+  top: 0 !important;
 }
 * {
   padding: 0;
@@ -373,5 +374,6 @@ html.lenis {
   border-radius: 10px;
 }
 
-
-
+.disable {
+  mask-image:none !important;
+}
