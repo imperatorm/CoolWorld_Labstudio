@@ -1,6 +1,8 @@
 .mask {
   position: relative;
   mask-image: url("/images/world.svg");
+  // mask-image: linear-gradient(to top, transparent, #000);
+  // mask-image: image(url("/images/world.png"), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
   mask-position: center center;
   mask-repeat: no-repeat;
   mask-size: 20%;
@@ -9,14 +11,29 @@
 }
 
 .video {
-  width: 100%;
-  // height: 100%;
+  width: 100vw;
 }
-.video2 {
-  width: 100%;
+.videoBannerText {
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 90px;
+  text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  
+  top: 20%;
+  // left: 50%;
+  transform: translate(40%, 40%);
+  opacity: 0;
+}
+.paraContent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-blue);
+  font-size: 70px;
+  line-height: 79px;
+  background-color: var(--color-milk);
+  margin-top: -15px;
+  & h2{
+    padding: 100px 135px;
+  }
 }

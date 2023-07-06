@@ -193,7 +193,7 @@ export class Content {
 				this.render();
 				this.pxIndex++;
 				this.animatePixels();
-			}, this.pxIndex === 0 ? 800 : 300); // The first time should be the longest.
+			}, this.pxIndex === 0 ? 200 : 100); // The first time should be the longest.
 		} 
 		else {
 			this.pxIndex = this.pxFactorValues.length - 1;

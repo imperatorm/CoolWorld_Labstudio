@@ -1,0 +1,39 @@
+.infoWrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
+  margin-bottom: 37px;
+  justify-content: center;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: 30px;
+  color:var(--color-milk);
+  margin-top: 80px;
+}
+
+.litInfo {
+  max-width: 224px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.bigInfo {
+  text-align: left;
+  width: 100%;
+  max-width: 740px;
+}
+
+.infoBtn {
+  display: block;
+  border: 3px solid var(--color-milk);
+  border-radius: 16.8px;
+  background-color: var(--color-milk);
+  color: var(--color-blue);
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 38.88px;
+  padding: 10px 60px;
+  margin: 0 auto;
+}

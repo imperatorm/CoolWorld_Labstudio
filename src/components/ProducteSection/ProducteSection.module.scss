@@ -1,0 +1,91 @@
+.textFill {
+  position: relative;
+  // height: 100vh;
+  margin-top: 180px;
+  & h3 {
+    font-size: 300px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 332.42px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-text-stroke-color: var(--color-milk);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, var(--color-milk),var(--color-milk));
+    background-size: 100%;
+    
+    background-position-y: 300px;
+    transition: background-position-y 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  }
+  &:hover h3{
+    background-position-y: 100%;
+  }
+}
+.imgWrap1 {
+    transform: translate(-10%, -50%);
+}
+.imgWrap2 {
+    transform: translate(-50%, -50%);
+}
+.imgWrap3 {
+    transform: translate(-90%, -50%);
+}
+.imgWrap {
+  position: absolute;
+  max-width: 414px;
+  width: 100%;
+  border-radius: 50%;
+  border:1px var(--color-blue) solid;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -50%);
+  & img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    min-height: 413px;
+    height: auto;
+
+  }
+  &:hover svg {
+    opacity: 1;
+  }
+}
+.svgCover {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  background-color: rgb(78 191 236 / 64%);
+  border: 3px solid var(--color-blue);
+  max-width: 414px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  animation: rotating 12s linear infinite;
+  & text {
+    fill:white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 31.1px;
+  }
+}
+.btnCows {
+  display: block;
+  border: 3px solid #F3F1DD;
+  border-radius: 16.8px;
+  background-color: #F3F1DD;
+  color: var(--color-blue);
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 38.88px;
+  padding: 10px 60px;
+  margin: 0 auto;
+  margin-top: 150px;
+}

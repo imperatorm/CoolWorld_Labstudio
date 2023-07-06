@@ -12,6 +12,7 @@
 #xoski {
   position: relative;
   top: 0 !important;
+  overflow: hidden;
 }
 * {
   padding: 0;
@@ -203,31 +204,10 @@ body #cdawrap {
 
 .content {
   height: 876px;
-  padding: 0 var(--padding-page);
   position: relative;
-  margin-top: 50px;
 }
 
-.canvas-wrap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-position: 50% 50%;
-  background-size: cover;
-  opacity: 0;
-  background-repeat: repeat;
-  max-width: 1430px;
-  width: 100%;
-  margin-right: auto;
-  border-radius: 400px 0 0 400px;
-}
 
-.content canvas {
-  border-radius: 400px 0 0 400px;
-
-}
 
 .no-js .canvas-wrap {
   opacity: 1;
@@ -377,3 +357,20 @@ html.lenis {
 .disable {
   mask-image:none !important;
 }
+ .fil1 {
+   fill: none
+ }
+
+ .fil2 {
+   fill: #4EBFEC
+ }
+
+ .fil0 {
+   fill: #4EBFEC
+ }
+ .videoParallax {
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -999;
+ }
