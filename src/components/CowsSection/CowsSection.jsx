@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect,useLayoutEffect, useRef } from "react";
 import styles from "./CowsSection.module.scss";
-import cowsImg from "../../../public/images/cows.png"
+import cowsImg from "./cows.png"
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
