@@ -15,7 +15,7 @@ const VideoScroll = () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: maskEl,
-            start: "-50% 30%",
+            start: "center center",
             pin: true,
             // pinSpacing:false,
             scrub: 1,
@@ -34,9 +34,9 @@ const VideoScroll = () => {
             opacity: "1",
             transform: "translate(50%, 50%)",
             duration: 1,
-            onComplete: function() {
-              maskEl.classList.add('videoParallax')
-            }
+            // onComplete: function() {
+            //   maskEl.classList.add('videoParallax')
+            // }
           })
           
       }
