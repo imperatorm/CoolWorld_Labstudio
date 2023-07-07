@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
-import maskImg from "./world.svg"
+import maskImg from "./world.svg";
 gsap.registerPlugin(ScrollTrigger)
 
 import styles from "./VideoScroll.module.scss";
