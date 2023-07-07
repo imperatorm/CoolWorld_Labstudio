@@ -1,21 +1,22 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { usePrevious } from "@uidotdev/usehooks";
+// import { usePrevious } from "@uidotdev/usehooks";
 
 import SubscribeBtn from "../SubscribeBtn/SubscribeBtn";
 import { TitleAnimation } from "../TitleAnimation/TitleAnimation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Content } from "../../../public/js/content";
-import { preloadImages } from "../../../public/js/utils";
+// import { Content } from "../../../public/js/content";
+// import { preloadImages } from "../../../public/js/utils";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade, Autoplay } from "swiper/modules";
-
+import homeImg from "./Home01.png"
+import girlImg from "./girl-min.png"
 import styles from "./HeroSection.module.scss";
 const HeroSection = () => {
   const [activeSection, setActiveSection] = useState(null);
-  const previousColor = usePrevious(activeSection);
+  // const previousColor = usePrevious(activeSection);
   const initialRef = useRef(null);
   // useEffect(() => {
   //   // let timeSection = null;
@@ -60,7 +61,7 @@ const HeroSection = () => {
           <section className={`${styles.heroWrap} content heroContent `}>
             <div
               className={`heroCanvas ${styles.heroBanner} canvas-wrap`}
-              style={{ backgroundImage: "url(images/Home01-min.png)" }}
+              style={{ backgroundImage: `url(${homeImg.src})` }}
             >
               <SubscribeBtn />
             </div>
@@ -77,7 +78,7 @@ const HeroSection = () => {
           <section className={`${styles.heroWrap} content heroContent`}>
             <div
               className={`heroCanvas ${styles.heroBanner} canvas-wrap`}
-              style={{ backgroundImage: "url(images/girl-min.png)" }}
+              style={{ backgroundImage: `url(${girlImg.src})` }}
             >
               <SubscribeBtn />
             </div>
