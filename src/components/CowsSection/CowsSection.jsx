@@ -46,7 +46,7 @@ const CowsSection = () => {
           className={`${styles.imgWrap1} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
-          <Image src={cowsImg} />
+          <Image src={cowsImg} alt={"cows"} />
           <svg viewBox="0 0 200 200" className={styles.svgCover}>
             <path
               id="textPath"
@@ -69,7 +69,7 @@ const CowsSection = () => {
           className={`${styles.imgWrap2} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
-          <Image src={cowsImg} />
+          <Image src={cowsImg} alt={"cows"} />
           <svg viewBox="0 0 200 200" className={styles.svgCover}>
             <path
               id="textPath"

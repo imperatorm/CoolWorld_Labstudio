@@ -1,6 +1,10 @@
 .heroWrap {
   margin-top: 50px;
+  height: 876px;
+  position: relative;
+
 }
+
 .secondTitle {
   font-size: 140px;
   padding-left: 90px;
@@ -17,6 +21,7 @@
 .firstTitle {
   font-size: 140px;
 }
+
 .heroBanner {
   position: absolute;
   top: 0;
@@ -31,8 +36,9 @@
   width: 100%;
   margin-right: auto;
   border-radius: 400px 0 0 400px;
+
   & canvas {
     border-radius: 400px 0 0 400px;
   }
-  
+
 }

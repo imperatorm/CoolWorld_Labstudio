@@ -38,14 +38,14 @@ const ProducteSection = () => {
   //     return () => ctx.revert();
   // }, []);
   return (
-    <div >
-      <div className={styles.textFill} ref={cowsRef}>
+    <div>
+      {/* <div className={styles.textFill} ref={cowsRef}>
         <h3>Produkte</h3>
         <div
           className={`${styles.imgWrap1} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
-          <Image src={barImg} />
+          <Image src={barImg} alt={"bar"} />
           <svg viewBox="0 0 200 200" className={styles.svgCover}>
             <path
               id="textPath"
@@ -68,7 +68,7 @@ const ProducteSection = () => {
           className={`${styles.imgWrap2} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
-          <Image src={barImg} />
+          <Image src={barImg} alt={"bar"} />
           <svg viewBox="0 0 200 200" className={styles.svgCover}>
             <path
               id="textPath"
@@ -91,7 +91,7 @@ const ProducteSection = () => {
           className={`${styles.imgWrap3} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
-          <Image src={barImg} />
+          <Image src={barImg} alt={"bar"} />
           <svg viewBox="0 0 200 200" className={styles.svgCover}>
             <path
               id="textPath"
@@ -110,8 +110,8 @@ const ProducteSection = () => {
             </g>
           </svg>
         </div>
-      </div>
-      <button className={styles.btnCows}>KeepColl.Bar</button>
+      </div> */}
+      {/* <button className={styles.btnCows}>KeepColl.Bar</button> */}
     </div>
   );
 };

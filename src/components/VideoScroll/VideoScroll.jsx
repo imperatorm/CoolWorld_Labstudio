@@ -9,7 +9,7 @@ import styles from "./VideoScroll.module.scss";
 const VideoScroll = () => {
   const maskRef = useRef(null);
   const elementRef = useRef(null)
-    useEffect(() => {
+  useEffect(() => {
       const maskEl = maskRef.current;
       if (maskEl) {
         const tl = gsap.timeline({
@@ -39,35 +39,6 @@ const VideoScroll = () => {
             }
           })
           
-        // gsap.fromTo(
-        //   maskEl,
-        //   { maskSize: "20%" },
-        //   {
-        //     maskSize: "100%",
-        //     duration: 3,
-
-        //     scrollTrigger: {
-        //       trigger: maskEl,
-        //       start: "-50% 30%",
-        //       pin: true,
-        //       // pinSpacing:false,
-        //       scrub: 4,
-        //       toggleActions: "restart reverse none none",
-        //       // play pause resume reverse restart reset complete none
-        //       // onEnter onLeave onEnterBack onLeaveBack
-        //       markers: true,
-        //     },
-        //   }
-        // );
-        // gsap.to("#xoski", {
-        //   scrollTrigger: {
-        //     trigger: "#xoski",
-        //     scrub: true,
-        //     pin: true,
-        //     start: "top center",
-        //     end: "bottom -100%",
-        //   },
-        // });
       }
     }, [maskRef]);
   return (

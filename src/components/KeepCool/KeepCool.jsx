@@ -7,7 +7,7 @@ const KeepCool = () => {
     <div className={` main-container`}>
       <KeepCoolInfo />
       <div className={styles.keepWrap}>
-        <div className="content">
+        <div className={`${styles.keepContent} content`}>
           <div
             className={`${styles.keepBanner} canvas-wrap`}
             style={{ backgroundImage: "url(Images/girl-min.png)" }}
