@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
-
+import maskImg from "./world.svg"
 gsap.registerPlugin(ScrollTrigger)
 
 import styles from "./VideoScroll.module.scss";
@@ -44,7 +44,7 @@ const VideoScroll = () => {
   return (
     <div>
       <div id="xoski" ref={elementRef}>
-        <div className={styles.mask} ref={maskRef}>
+        <div className={styles.mask} ref={maskRef} style={{ maskImage: `url(${maskImg.src})` }} >
           {/* <Image src={worldImg} /> */}
           <video className={styles.video} autoPlay muted loop>
             <source src={"./111.mp4"} type="video/mp4" />
