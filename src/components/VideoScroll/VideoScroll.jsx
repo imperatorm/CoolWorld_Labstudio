@@ -25,9 +25,13 @@ const VideoScroll = () => {
             // markers: true,
           },
         });
-        tl.to(maskEl, { maskSize: "100%", duration: 3 })
+        tl.fromTo(
+          maskEl,
+          { maskImage: `url(${maskImg.src})` },
+          { maskSize: "100%", duration: 3 }
+        )
           .to(maskEl, {
-            maskImage: "none",
+            maskImage: "none !important",
             duration: 1,
           })
           .to("#videoBannerText", {
@@ -37,14 +41,14 @@ const VideoScroll = () => {
             // onComplete: function() {
             //   maskEl.classList.add('videoParallax')
             // }
-          })
+          });
           
       }
     }, [maskRef]);
   return (
     <div>
       <div id="xoski" ref={elementRef}>
-        <div className={styles.mask} ref={maskRef} style={{ maskImage: `url(${maskImg.src})` }} >
+        <div className={styles.mask} ref={maskRef}  >
           {/* <Image src={worldImg} /> */}
           <video className={styles.video} autoPlay muted loop>
             <source src={"./111.mp4"} type="video/mp4" />
