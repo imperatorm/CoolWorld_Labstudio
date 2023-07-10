@@ -2,11 +2,13 @@
   position: relative;
   // mask-image: linear-gradient(to top, transparent, #000);
   // mask-image: image(url("/images/world.png"), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+  // mask-image: image(url("./world.svg"));
   mask-position: center center;
   mask-repeat: no-repeat;
   mask-size: 20%;
   // top: 0 !important;
   z-index: 9;
+  height: 100vh;
 }
 
 .video {
@@ -35,4 +37,12 @@
   & h2{
     padding: 100px 135px;
   }
+}
+
+.videoWrap {
+  position: relative;
+  top: 0 !important;
+  overflow: hidden;
+  height: 100vh;
+  width: auto;
 }
