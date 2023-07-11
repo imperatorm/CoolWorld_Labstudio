@@ -32,7 +32,7 @@ const component = useRef();
           start: "top top",
           end: "bottom",
           toggleActions: "restart reverse none none",
-          markers: true,
+          // markers: true,
         },
       });
       tl.add("anim_start", "+=0")

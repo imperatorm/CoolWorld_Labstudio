@@ -370,3 +370,13 @@ html.lenis {
   top: 0;
   z-index: -999;
  }
+ .split-lines {
+  display: flex;
+ }
+ .split-words {
+  display: flex;
+ 
+ }
+ .split-charts {
+  opacity: 0;
+ }
