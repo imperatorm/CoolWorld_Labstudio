@@ -47,7 +47,7 @@ const HeroSection = () => {
         spaceBetween={30}
         effect={"fade"}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, EffectFade]}
