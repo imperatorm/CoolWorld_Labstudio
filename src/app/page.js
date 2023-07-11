@@ -21,13 +21,13 @@ export default function Home() {
       </h2>
       <VideoScroll />
 
+      <div style={{ height: "25vh" }}></div>
       <CowsSection />
-      {/* <div style={{ height: "100vh" }}></div> */}
       <InfoSection info={infoFirst} />
       <ParallaxImg />
       <ProducteSection />
       <InfoSection info={infoSecond} />
-      {/* <KeepCool /> */}
+      <KeepCool />
     </div>
   );
 }

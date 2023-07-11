@@ -6,6 +6,7 @@ import shapeImg from "@/assets/images/shape3.png"
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Power0 } from "gsap-trial";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -42,6 +43,7 @@ const component = useRef();
             keyframes: { x: [500, 185, -357] },
             duration: 5,
             autoAlpha: 1,
+            ease: Power0.easeNone,
           },
           "anim_start"
         )
@@ -51,11 +53,12 @@ const component = useRef();
             backgroundPositionY: "-50%",
             // backgroundPositionX: "500px",
             duration: 5,
+            ease: Power0.easeNone,
             // timeScale: 0.1,
             // autoAlpha: 1,
           },
           "anim_start"
-        )
+        );
         tl.add("anim_start2", "+=0")
           .to(
             ".textWaves",
@@ -63,6 +66,7 @@ const component = useRef();
               backgroundPositionY: "-5%",
               // backgroundPositionX: "800px",
               duration: 5,
+              ease: Power0.easeNone,
               // timeScale: 0.1,
               // autoAlpha: 1,
             },
@@ -73,16 +77,18 @@ const component = useRef();
             {
               keyframes: { x: [500, 185, 43] },
               duration: 5,
+              ease: Power0.easeNone,
               autoAlpha: 1,
             },
             "anim_start2"
-          )
+          );
 tl.add("anim_start3", "+=0")
   .to(
     contents[2],
     {
       keyframes: { x: [500, 185, 10] },
       duration: 5,
+      ease: Power0.easeNone,
       autoAlpha: 1,
     },
     "anim_start3"
@@ -93,19 +99,12 @@ tl.add("anim_start3", "+=0")
       backgroundPositionY: "100%",
       // backgroundPositionX: "1000px",
       duration: 5,
+      ease: Power0.easeNone,
 
       // autoAlpha: 1,
     },
     "anim_start3"
   );
-      // contents.forEach((content,idx) => {
-
-      //   tl.to(content, {
-      //     keyframes: { x: [500, 185, -325+(idx*(-325))] },
-      //     duration: 5,
-      //     autoAlpha: 1,
-      //   });
-      // });
     }
   }, [component]);
   return (
