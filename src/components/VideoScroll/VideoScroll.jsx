@@ -38,7 +38,7 @@ const VideoScroll = () => {
              start: "top top",
              pin: true,
              // pinSpacing:false,
-             scrub: 4,
+             scrub: 1,
              end: "bottom",
              toggleActions: "restart reverse none none",
              // play pause resume reverse restart reset complete none
