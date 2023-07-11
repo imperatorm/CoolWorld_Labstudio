@@ -7,7 +7,7 @@ import maskImg from "./world.svg";
 gsap.registerPlugin(ScrollTrigger);
 gsap.config({ trialWarn: false });
 import styles from "./VideoScroll.module.scss";
-import { Power3 } from "gsap-trial";
+import { Power0 } from "gsap-trial";
 const VideoScroll = () => {
   const maskRef = useRef(null);
   const elementRef = useRef(null);
@@ -38,18 +38,19 @@ const VideoScroll = () => {
              start: "top top",
              pin: true,
              // pinSpacing:false,
-             scrub: 1,
+             scrub: 4,
              end: "bottom",
              toggleActions: "restart reverse none none",
              // play pause resume reverse restart reset complete none
              // onEnter onLeave onEnterBack onLeaveBack
-            //  markers: true,
+             //  markers: true,
            },
          })
-         .to(maskEl, { maskSize: "100%", duration: 1 })
+         .to(maskEl, { maskSize: "100%", duration: 5, ease: Power0.easeNone })
          .to(maskEl, {
            maskImage: "none",
-           duration: 1,
+           duration: 5,
+           ease: Power0.easeNone,
          })
          .fromTo(
            charts,
@@ -59,7 +60,7 @@ const VideoScroll = () => {
              stagger: 1,
              transformOrigin: "top center",
              z: 0,
-             ease: Power3.easeIn,
+             ease: Power0.easeNone,
              opacity: 0,
            },
            {
@@ -68,7 +69,7 @@ const VideoScroll = () => {
              stagger: 2,
              transformOrigin: "top center",
              z: -150,
-             ease: Power3.easeIn,
+             ease: Power0.easeNon,
              opacity: 1,
            }
          )
@@ -78,7 +79,7 @@ const VideoScroll = () => {
            stagger: 1,
            transformOrigin: "top center",
            z: 0,
-           ease: Power3.easeIn,
+           ease: Power0.easeNon,
            opacity: 0,
          });
         //  .to("#videoBannerText", {
@@ -170,12 +171,12 @@ const VideoScroll = () => {
 
           </h3>
         </div>
-        <div className={`${styles.paraContent} `}>
+        {/* <div className={`${styles.paraContent} `}>
           <h2>
             Erfrischende Kühlzonen für heiße Tage: Genieße den Sommer mit
             unseren Cooling Oasis
           </h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );
