@@ -35,7 +35,7 @@ const VideoScroll = () => {
          .timeline({
            scrollTrigger: {
              trigger: elementRef.current,
-             start: "-180% top",
+             start: "top top",
              pin: true,
              // pinSpacing:false,
              scrub: 1,
