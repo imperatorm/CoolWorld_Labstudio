@@ -19,16 +19,15 @@ export default function Home() {
         Sprühnebelkühlung. Schaffe eine erfrischende Umgebung, um die Natur und
         deinen Lifestyle auch an den heißesten Tagen zu genießen.
       </h2>
-      <div >
-        <VideoScroll />
+      <VideoScroll />
 
-      </div>
       <CowsSection />
+      {/* <div style={{ height: "100vh" }}></div> */}
       <InfoSection info={infoFirst} />
       <ParallaxImg />
       <ProducteSection />
       <InfoSection info={infoSecond} />
-      <KeepCool />
+      {/* <KeepCool /> */}
     </div>
   );
 }

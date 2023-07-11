@@ -2,69 +2,90 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger"
+import SplitText from "gsap-trial/SplitText";
 import maskImg from "./world.svg";
-gsap.registerPlugin(ScrollTrigger)
-
+gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.config({ trialWarn: false });
 import styles from "./VideoScroll.module.scss";
 const VideoScroll = () => {
   const maskRef = useRef(null);
-  const elementRef = useRef(null)
+  const elementRef = useRef(null);
+  const textRef = useRef(null)
   useEffect(() => {
       const maskEl = maskRef.current;
-      
+      const textEl = textRef.current;
       if (maskEl) {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: elementRef.current,
-            // start: "center center",
-            pin: true,
-            // pinSpacing:false,
-            scrub: 1,
-            start: "top top",
-            end: "+=3000 bottom",
-            toggleActions: "restart reverse none none",
-            // play pause resume reverse restart reset complete none
-            // onEnter onLeave onEnterBack onLeaveBack
-            markers: true,
-          },
+       
+        let mySplitText;
+        
+     
+        mySplitText = new SplitText(textEl, {
+          type: "chars,words,lines",
+          charsClass: "split-chars",
+          wordsClass: "split-words",
+          linesClass: "split-lines",
         });
-        tl.fromTo(
-          maskEl,
-          { maskImage: `url(${maskImg.src})` },
-          { maskSize: "100%", duration: 1 }
-        )
-          // tl.add(maskInitial)
-          // tl.fromTo(
-          //   maskEl,
-          //   { maskImage: `url(${maskImg.src})` },
-          //   { maskSize: "100%", duration: 2 }
-          // )
-          // .to(maskEl, { maskSize: "100%", duration: 1 })
-          .to(maskEl, {
-            maskImage: "none",
-            // duration: 1,
-          })
-          // .set(maskEl, { maskImage: "none !important" })
+      console.log("mySplitText :", mySplitText);
 
-          .to("#videoBannerText", {
-            opacity: "1",
-            transform: "translate(50%, 50%)",
-            duration: 1,
-            // onComplete: function() {
-            //   maskEl.classList.add('videoParallax')
-            // }
-          });
+       gsap.set(maskEl, { maskImage: `url(${maskImg.src})` });  
+       gsap.set(elementRef.current, { y: 0,x:0 }); 
+       gsap
+         .timeline({
+           scrollTrigger: {
+             trigger: elementRef.current,
+             // start: "center center",
+             pin: true,
+             // pinSpacing:false,
+             scrub: 1,
+             start: "top top",
+             end: "bottom",
+             toggleActions: "restart reverse none none",
+             // play pause resume reverse restart reset complete none
+             // onEnter onLeave onEnterBack onLeaveBack
+             markers: true,
+           },
+         })
+         .to(maskEl, { maskSize: "100%", duration: 1 })
+         .to(maskEl, {
+           maskImage: "none",
+           // duration: 1,
+         })
+         .from(mySplitText.chars, {
+           duration: 0.8,
+           rotationX: 75,
+           stagger: 0.1,
+           transformOrigin: "top center",
+           z: -150,
+           opacity: 0,
+         });
+        //  .to("#videoBannerText", {
+        //    opacity: "1",
+        //    transform: "translate(50%, 50%)",
+        //    duration: 1,
+        //    // onComplete: function() {
+        //    //   maskEl.classList.add('videoParallax')
+        //    // }
+        //  });
           
       }
     }, [maskRef]);
   return (
+    <div>
       <div id="videoWrap" className={styles.videoWrap} ref={elementRef}>
-        <div className={styles.mask} ref={maskRef}  style={{maskImage: `url(${maskImg.src})`}}>
+        <div
+          className={styles.mask}
+          ref={maskRef}
+          style={{ maskImage: `url(${maskImg.src})` }}
+        >
           {/* <Image src={worldImg} /> */}
           <video className={styles.video} autoPlay muted loop>
             <source src={"./111.mp4"} type="video/mp4" />
           </video>
-          <h3 className={styles.videoBannerText} id="videoBannerText">
+          <h3
+            className={styles.videoBannerText}
+            id="videoBannerText"
+            ref={textRef}
+          >
             ohne nass zu werden
           </h3>
         </div>
@@ -75,6 +96,7 @@ const VideoScroll = () => {
           </h2>
         </div> */}
       </div>
+    </div>
   );
 };
 

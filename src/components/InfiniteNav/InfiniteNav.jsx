@@ -56,7 +56,7 @@ const InfiniteNav = ({ links, handleActive }) => {
               // loop={true}
               keepLastFrame={true}
               controls={true}
-              style={{ width: "38px", height: "38px" }}
+              style={{ width: "38px", height: "38px",    transform:" rotate(45deg)" }}
             ></Player>
           </div>
         </div>

@@ -27,7 +27,7 @@ const HeroSection = () => {
         if (previousColor !== null) {
           const contentCanvas = [...document.querySelectorAll(".heroCanvas")];
           contentCanvas.forEach((el) => {
-            console.log(el.querySelector("canvas"));
+
             if (el.querySelector("canvas")) {
               el.querySelector("canvas").remove();
             }
