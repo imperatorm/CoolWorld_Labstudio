@@ -71,13 +71,12 @@ const InfiniteNav = ({ links, handleActive }) => {
                   href={link.href}
                   key={link.id}
                   className={isActive ? "active" : ""}
+                  onClick={handleActive}
                 >
                   <span>{link.title}</span>
                   <p className={styles.wrapAnim}>
                     <InfiniteLoop text={link.title} />
                   </p>
-
-                  
                 </Link>
               </li>
             );

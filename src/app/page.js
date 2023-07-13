@@ -7,6 +7,7 @@ import ProducteSection from "@/components/ProducteSection/ProducteSection";
 import { infoFirst, infoSecond } from "@/date/date";
 import ParallaxImg from "@/components/ParallaxImg/ParallaxImg";
 import KeepCool from "@/components/KeepCool/KeepCool";
+import TheFooter from "@/components/TheFooter/TheFooter";
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
       <ProducteSection />
       <InfoSection info={infoSecond} />
       <KeepCool />
+      <TheFooter />
     </div>
   );
 }

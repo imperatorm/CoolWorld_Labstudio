@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
       <body className={replica.className}>
         <TheHeader />
         <main>{children}</main>
-        <TheFooter />
+        {/* <TheFooter /> */}
         <Script
           src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"
           

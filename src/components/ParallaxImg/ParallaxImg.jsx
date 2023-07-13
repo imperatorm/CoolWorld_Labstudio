@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 // import bannerImg from "../../../public/images/home4.png"
 import styles from './ParallaxImg.module.scss'
-import homeParallax from "./home4.png"
+import homeParallax from "@/assets/images/home4.png";
 const ParallaxImg = () => {
   return (
     <div

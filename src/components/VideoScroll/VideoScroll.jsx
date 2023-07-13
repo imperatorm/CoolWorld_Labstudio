@@ -17,17 +17,7 @@ const VideoScroll = () => {
       const maskEl = maskRef.current;
       const textEl = textRef.current;
       if (maskEl) {
-       
-        // let mySplitText;
-        
-     
-        // mySplitText = new SplitText(textEl, {
-        //   type: "chars,words,lines",
-        //   charsClass: "split-chars",
-        //   wordsClass: "split-words",
-        //   linesClass: "split-lines",
-        // });
-
+    
        const charts = [...document.querySelectorAll(".split-chars")];
        gsap.set(maskEl, { maskImage: `url(${maskImg.src})` });  
        gsap.set(elementRef.current, { y: 0,x:0 }); 
