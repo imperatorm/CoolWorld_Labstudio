@@ -1,0 +1,20 @@
+.dateContent {
+  & > h2 {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 79px;
+    margin-bottom: 43px;
+    margin-top: 100px;
+  }
+  & > p {
+  color: var(--color-milk);
+  font-family: var(--font-replica);
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 25px;
+  }
+}
