@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import { forwardRef } from "react";
@@ -1426,7 +1425,7 @@ export const WorldIcon = forwardRef(function WorldIcon(props, ref) {
   );
 });
 
-export const FunktionIcon = forwardRef(function WorldIcon(props, ref) {
+export const FunktionIcon = forwardRef(function FunktionIcon(props, ref) {
   return (
     <svg
       width="1009.10004px"
@@ -1686,6 +1685,23 @@ export const FunktionIcon = forwardRef(function WorldIcon(props, ref) {
           </g>
         </g>
       </g>
+    </svg>
+  );
+});
+
+export const LongArrow = forwardRef(function LongArrow(props, ref) {
+  return (
+    <svg
+      width={1037}
+      height={12}
+      viewBox="0 0 1037 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+      ref={ref}
+    >
+      <rect y={5} width={1024} height={2} fill="white" />
+      <path d="M1037 6L1028 11.1962L1028 0.803847L1037 6Z" fill="white" />
     </svg>
   );
 });

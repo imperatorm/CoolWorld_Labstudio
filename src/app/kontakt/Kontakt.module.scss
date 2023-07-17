@@ -1,0 +1,114 @@
+.wrapper {
+  margin-top: 200px;
+  
+}
+
+.headTitle {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 100px;
+
+  &>h2 {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 300px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 332.42px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &>marquee {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 300px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 332.42px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  //  & > p {
+  //   color: var(--color-milk);
+  //   font-family: var(--font-replica);
+  //   font-size: 33px;
+  //   letter-spacing: 0;
+  //   line-height: 43px;
+  //   margin-top: 44px;
+  //  }
+}
+
+.schrebin {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  overflow: hidden;
+
+  &>button {
+    border-radius: 16.8px;
+    background-color: var(--color-milk);
+    color: var(--color-blue);
+    line-height: 25.92px;
+    // padding: 16px 30px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 25.92px;
+    padding: 16px 0;
+    z-index: 5;
+  }
+}
+
+.keep {
+  &>h3 {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 79px;
+    margin-bottom: 50px;
+  }
+  &>p {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 33px;
+    letter-spacing: 0;
+    line-height: 43px;
+    margin-top: 44px;
+  }
+}
+.info {
+  & > ul {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  & > ul li {
+    color: var(--color-milk);
+    font-family: var(--font-replica);
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 30px;
+    
+  }
+  & > button {
+     display: block;
+    border-radius: 16.8px;
+      background-color: var(--color-milk);
+      color: var(--color-blue);
+      font-size: 17.28px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 25.92px;
+      // padding: 16px 30px;
+      width: 100%;
+      max-width: 333px;
+      padding: 16px 0;
+      margin-bottom: 30px;
+  }
+}
