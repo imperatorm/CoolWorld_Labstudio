@@ -1705,3 +1705,51 @@ export const LongArrow = forwardRef(function LongArrow(props, ref) {
     </svg>
   );
 });
+
+
+export const SolarTop = forwardRef(function SolarTop(props, ref) {
+  return (
+    <svg width="153.95996px" height="404.95996px" viewBox="0 0 153.95996 404.95996" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group-23-Copy-5" transform="translate(0.47998047 0.47998047)">
+    <path d="M114.644 378.054L116.958 384.233L86.6329 390.943L63.2678 386.718L63.3848 376.184C31.1888 377.305 6.84329 382.496 6.84329 388.732C6.84329 395.786 38.0037 401.505 76.4417 401.505C114.88 401.505 146.04 395.786 146.04 388.732C146.04 384.266 133.554 380.337 114.644 378.054Z" id="Stroke-1" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M6.84327 388.819L6.84327 391.227C6.84327 398.281 38.0036 404 76.4416 404C114.88 404 146.04 398.281 146.04 391.227L146.04 388.819" id="Stroke-3" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M48.0223 35.6229L130.878 0L105.69 26.8414L21.1773 60.9732L48.0223 35.6229Z" id="Stroke-5" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M130.878 2.5103e-05L132.203 1.98818L107.015 28.8298L22.5029 62.9614L21.1772 60.9732" id="Stroke-7" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M78.8445 239.34L78.8445 40.2069L72.879 42.6163L72.879 239.345C74.0793 239.339 75.2859 239.336 76.5001 239.336C77.2847 239.336 78.0655 239.338 78.8445 239.34Z" id="Stroke-9" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M153 252.981L153 247.016C153 242.853 120.009 239.464 78.8446 239.34L78.8446 40.207L72.879 42.6164L72.879 239.345C32.3108 239.535 0 242.896 0 247.016L0 252.981" id="Stroke-11" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M105.69 26.8415L107.015 28.8296" id="Stroke-13" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M75.696 251.517L76.1931 275.376L116.958 384.233L86.6329 390.943L86.6329 367.333L39.1568 248.286L75.696 251.517Z" id="Stroke-15" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M86.6329 390.943L63.2678 386.718L63.5164 364.35L15.7915 250.026L39.1569 248.286" id="Stroke-17" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M63.5163 364.35L86.6328 367.333" id="Stroke-19" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+    <path d="M153 253.13C153 248.945 118.75 245.552 76.4999 245.552C34.2502 245.552 0 248.945 0 253.13C0 255.055 7.24798 256.812 19.1826 258.149L15.7917 250.025L39.1568 248.286L75.696 251.517L75.8875 260.708C76.0919 260.708 76.2953 260.709 76.4999 260.709C118.75 260.709 153 257.316 153 253.13Z" id="Stroke-21" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
+  </g>
+</svg>
+
+  );
+})
+
+export const SolarCenter = forwardRef(function SolarTop(props,ref) {
+  return (
+    <svg width="432px" height="324px" viewBox="0 0 432 324" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L432 0L432 324L0 324L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlinkHref="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Group-23-Copy">
+    <path d="M0 0L432 0L432 324L0 324L0 0Z" id="Mask" fill="none" fillRule="evenodd" stroke="none" />
+    <g clipPath="url(#mask_1)">
+      <g id="Group-23-Copy" transform="translate(-23.4 8.1)">
+        <path d="M149.985 111.473L409.2 0L330.399 83.9933L66 190.8L149.985 111.473Z" id="Stroke-5" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+        <path d="M409.252 0.3L413.4 6.51444L334.587 90.4141L70.1479 197.1L66 190.886" id="Stroke-7" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+        <path d="M246.3 748.185L246.3 126L227.7 133.528L227.7 748.2C231.443 748.183 235.205 748.173 238.99 748.173C241.436 748.173 243.871 748.178 246.3 748.185Z" id="Stroke-9" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+        <path d="M478.5 790.8L478.5 772.164C478.5 759.158 375.323 748.569 246.583 748.181L246.583 126L227.926 133.528L227.926 748.196C101.05 748.789 0 759.292 0 772.164L0 790.8" id="Stroke-11" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+        <path d="M330.6 84L334.8 90.3" id="Stroke-13" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+      </g>
+    </g>
+  </g>
+</svg>
+
+  );
+})
