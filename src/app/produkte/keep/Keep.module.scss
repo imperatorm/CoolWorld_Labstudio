@@ -1,0 +1,277 @@
+.wrapper {
+  color: var(--color-milk);
+  font-family: var(--font-replica);
+}
+
+.solarTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.solarTopInfo {
+  &>h2 {
+    font-size: 85px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 70px;
+
+  }
+
+  &>h2:nth-child(2) {
+    padding-left: 30px;
+
+  }
+
+  &>p {
+    font-size: 25.43px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+}
+
+.solarTopSvg {
+  svg {
+    max-width: 678px;
+    width: 100%;
+  }
+}
+
+.solarTopButton {
+  width: 100%;
+  max-width: 225px;
+
+  &>button {
+    color: #4EBFEC;
+    border-radius: 16.8px;
+    background-color: #F3F1DD;
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 0;
+  }
+}
+
+.circleCount {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+
+  &>p {
+    display: flex;
+    align-items: center;
+    height: 58px;
+    width: 58px;
+    background-color: #F3F1DD;
+    color: #4EBFEC;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &>h6 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+}
+
+.solarInfo {
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 26px;
+  max-width: 448px;
+  width: 100%;
+  padding-left: 50px;
+  margin-top: 40px;
+
+  &>p {
+    margin-bottom: 15px;
+  }
+}
+
+.solarTopSecond {
+  max-width: 1342px;
+  margin: 0 auto;
+  justify-content: stretch;
+  gap: 70px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.einWrap {
+  padding-top: 100px;
+
+  &>h4 {
+    max-width: 379px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--font-replica);
+    font-size: 54px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 61.56px;
+    text-align: center;
+  }
+}
+
+.svgCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: rgb(78 191 236 / 64%);
+  border: 3px solid var(--color-blue);
+  max-width: 414px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+
+  animation: rotating 12s linear infinite;
+
+  & text {
+    fill: white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 31.1px;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.circleNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 65px;
+  padding-bottom: 69px;
+  gap: 50px;
+
+  & .circleNavItem {
+
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    color: var(--color-milk);
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+
+  }
+}
+
+.imgWrap img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.circleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  padding-top: 100px;
+}
+
+.circleItems {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+
+  &>img {
+    width: 314px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.circleItem {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &>img {
+    width: 314px;
+    height: 314px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &:hover svg {
+    opacity: 1;
+  }
+}
+
+.solarMiddle {
+  position: relative;
+
+  & svg {
+    max-width: 1152px;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.solarMiddleInfo {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+}
+
+.solarBottom {
+  position: relative;
+  margin: 80px 0;
+  height: 100vh;
+}
+
+.solarBottomFirst {
+  position: absolute;
+  left: 22%;
+  top: 7%;
+}
+
+.solarBottomSvg {
+  & svg {
+    max-width: 1302px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.solarBottomLast {
+  position: absolute;
+  bottom: 0;
+  left: 11%;
+}
+
+.btnWrap {
+  max-width: 336px;
+  width: 100%;
+  border-radius: 16.8px;
+  background-color: var(--color-milk);
+  display: flex;
+  padding:16px 0;
+  justify-content: center;
+  & a {
+    color: var(--color-blue);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 25.92px;
+  }
+}

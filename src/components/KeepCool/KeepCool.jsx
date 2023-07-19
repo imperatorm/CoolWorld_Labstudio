@@ -2,7 +2,7 @@ import React from 'react'
 import KeepCoolInfo from './KeepCoolInfo';
 import { TitleAnimation } from '../TitleAnimation/TitleAnimation';
 import styles from "./KeepCool.module.scss"
-import girlImg from "./girl-min.png";
+import girlImg from "@/assets/images/girl-min.png";
 const KeepCool = () => {
   return (
     <div className={` main-container`}>

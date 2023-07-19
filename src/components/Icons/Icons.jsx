@@ -1709,7 +1709,7 @@ export const LongArrow = forwardRef(function LongArrow(props, ref) {
 
 export const SolarTop = forwardRef(function SolarTop(props, ref) {
   return (
-    <svg width="153.95996px" height="404.95996px" viewBox="0 0 153.95996 404.95996" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <svg ref={ref} {...props}  viewBox="0 0 153.95996 404.95996" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <g id="Group-23-Copy-5" transform="translate(0.47998047 0.47998047)">
     <path d="M114.644 378.054L116.958 384.233L86.6329 390.943L63.2678 386.718L63.3848 376.184C31.1888 377.305 6.84329 382.496 6.84329 388.732C6.84329 395.786 38.0037 401.505 76.4417 401.505C114.88 401.505 146.04 395.786 146.04 388.732C146.04 384.266 133.554 380.337 114.644 378.054Z" id="Stroke-1" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
     <path d="M6.84327 388.819L6.84327 391.227C6.84327 398.281 38.0036 404 76.4416 404C114.88 404 146.04 398.281 146.04 391.227L146.04 388.819" id="Stroke-3" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.96" />
@@ -1746,6 +1746,32 @@ export const SolarCenter = forwardRef(function SolarTop(props,ref) {
         <path d="M246.3 748.185L246.3 126L227.7 133.528L227.7 748.2C231.443 748.183 235.205 748.173 238.99 748.173C241.436 748.173 243.871 748.178 246.3 748.185Z" id="Stroke-9" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
         <path d="M478.5 790.8L478.5 772.164C478.5 759.158 375.323 748.569 246.583 748.181L246.583 126L227.926 133.528L227.926 748.196C101.05 748.789 0 759.292 0 772.164L0 790.8" id="Stroke-11" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
         <path d="M330.6 84L334.8 90.3" id="Stroke-13" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.6" />
+      </g>
+    </g>
+  </g>
+</svg>
+
+  );
+})
+
+export const SolarBottom = forwardRef(function SolarBottom(props,ref) {
+  return (
+    <svg width="576px" height="432px" viewBox="0 0 576 432" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L576 0L576 432L0 432L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlinkHref="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Group-23-Copy-3" transform="matrix(-1 0 0 1 576 0)">
+    <path d="M0 0L576 0L576 432L0 432L0 0Z" id="Mask" fill="none" fillRule="evenodd" stroke="none" />
+    <g clippath="url(#mask_1)">
+      <g id="Group-23-Copy" transform="translate(46.8 -335.6)">
+        <path d="M174.8 531.189L174.8 89.6L161.6 94.943L161.6 531.2C164.256 531.188 166.926 531.181 169.612 531.181C171.348 531.181 173.076 531.184 174.8 531.189Z" id="Stroke-9" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.8" />
+        <path d="M339.6 561.2L339.6 547.968C339.6 538.734 266.373 531.217 175.004 530.941L175.004 89.2L161.763 94.5448L161.763 530.952C71.7172 531.373 0 538.83 0 547.968L0 561.2" id="Stroke-11" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.8" />
+        <path d="M167.955 557.966L169.059 610.883L259.6 852.317L192.247 867.2L192.247 814.834L86.8 550.8L167.955 557.966Z" id="Stroke-15" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.8" />
+        <path d="M192.4 867.2L140.552 857.829L141.103 808.219L35.2 554.658L87.0486 550.8" id="Stroke-17" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.8" />
+        <path d="M339.6 561.6C339.6 552.322 263.578 544.8 169.8 544.8C76.0221 544.8 0 552.322 0 561.6C0 565.867 16.0877 569.762 42.5778 572.725L35.0514 554.717L86.9127 550.861L168.015 558.023L168.441 578.398C168.894 578.398 169.346 578.4 169.8 578.4C263.578 578.4 339.6 570.878 339.6 561.6Z" id="Stroke-21" fill="none" fillRule="evenodd" stroke="#F2F0DC" strokeWidth="0.8" />
       </g>
     </g>
   </g>

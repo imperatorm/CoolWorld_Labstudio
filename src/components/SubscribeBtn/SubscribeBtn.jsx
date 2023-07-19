@@ -24,7 +24,7 @@ const SubscribeBtn = () => {
     }
   }, [isHovered]);
   return (
-    <div className={styles.linkWrap}>
+  
       <Link
         href={"mailto:example@example.com"}
         className={styles.linkSubs}
@@ -47,7 +47,7 @@ const SubscribeBtn = () => {
           ></Player>
         </div>
       </Link>
-    </div>
+    
   );
 };
 

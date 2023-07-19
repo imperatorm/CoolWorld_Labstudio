@@ -5,6 +5,7 @@ import barImg from "./bar_blue.png"
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -38,10 +39,11 @@ const ProducteSection = () => {
   //     return () => ctx.revert();
   // }, []);
   return (
-    <div >
+    <div>
       <div className={styles.textFill} ref={cowsRef}>
         <h3>Produkte</h3>
-        <div
+        <Link
+          href={"/produkte/keep"}
           className={`${styles.imgWrap1} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
@@ -63,8 +65,9 @@ const ProducteSection = () => {
               </text>
             </g>
           </svg>
-        </div>
-        <div
+        </Link>
+        <Link
+          href={"/produkte/keep"}
           className={`${styles.imgWrap2} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
@@ -86,8 +89,9 @@ const ProducteSection = () => {
               </text>
             </g>
           </svg>
-        </div>
-        <div
+        </Link>
+        <Link
+          href={"/produkte/keep"}
           className={`${styles.imgWrap3} ${styles.imgWrap}`}
           ref={cowsImgOneRef}
         >
@@ -109,7 +113,7 @@ const ProducteSection = () => {
               </text>
             </g>
           </svg>
-        </div>
+        </Link>
       </div>
       <button className={styles.btnCows}>KeepColl.Bar</button>
     </div>

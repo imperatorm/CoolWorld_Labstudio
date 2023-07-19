@@ -4,6 +4,7 @@ import styles from "./Kontakt.module.scss";
 import React, { useEffect, useState } from "react";
 import { LongArrow } from "@/components/Icons/Icons";
 import Link from "next/link";
+import SubscribeBtn from "@/components/SubscribeBtn/SubscribeBtn";
 
 
 const Kontakt = () => {
@@ -37,9 +38,10 @@ const Kontakt = () => {
       </div>
       <div className={`${styles.schrebin}`}>
         <LongArrow
-          style={{ transform: `translateX(${Math.abs(scrollX/10)}px)` }}
+          style={{ transform: `translateX(${Math.abs(scrollX / 10)}px)` }}
         />
-        <button>Schreiben Sie uns eine E-Mail.</button>
+        <SubscribeBtn />
+        {/* <button>Schreiben Sie uns eine E-Mail.</button> */}
       </div>
       <div className={`main-container`}>
         <div className={`${styles.keep}`}>

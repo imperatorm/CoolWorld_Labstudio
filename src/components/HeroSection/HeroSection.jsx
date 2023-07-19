@@ -11,8 +11,8 @@ import { preloadImages } from "../../../public/js/utils";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade, Autoplay } from "swiper/modules";
-import homeImg from "./Home01.png";
-import girlImg from "./girl-min.png";
+import homeImg from "@/assets/images/Home01-min.png";
+import girlImg from "@/assets/images/girl-min.png";
 
 
 import styles from "./HeroSection.module.scss";
@@ -75,7 +75,9 @@ const HeroSection = () => {
               }`}
               style={{ backgroundImage: `url(${homeImg.src})` }}
             >
-              <SubscribeBtn />
+              <div className={styles.linkWrap}>
+                <SubscribeBtn />
+              </div>
             </div>
 
             <TitleAnimation>
@@ -98,7 +100,9 @@ const HeroSection = () => {
               }`}
               style={{ backgroundImage: `url(${girlImg.src})` }}
             >
-              <SubscribeBtn />
+              <div className={styles.linkWrap}>
+                <SubscribeBtn />
+              </div>
             </div>
 
             <TitleAnimation>

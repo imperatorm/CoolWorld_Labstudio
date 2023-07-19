@@ -1,8 +1,10 @@
+"use client"
 import TheHeader from '@/components/TheHeader/TheHeader';
 import './globals.css'
 import localFont from "next/font/local";
 import Script from 'next/script'
 import TheFooter from '@/components/TheFooter/TheFooter';
+import { usePathname } from "next/navigation";
 
 const replica = localFont({
   src: [
@@ -69,10 +71,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const pathNameHeader = ["/bereiche/keep",];
   return (
     <html lang="en">
       <body className={replica.className}>
-        <TheHeader />
+        {!pathNameHeader.includes(pathname) && <TheHeader />}
         <main>{children}</main>
         {/* <TheFooter /> */}
         <Script
@@ -80,11 +84,17 @@ export default function RootLayout({ children }) {
           
         />
 
-        <Script src="js/imagesloaded.pkgd.min.js"  />
-        <Script src="js/gsap.min.js"  />
-        <Script src="js/ScrollTrigger.min.js"  />
-        <Script src="js/lenis.min.js"  />
-        <Script src="js/index.js" type="module" ></Script>
+        <Script
+          src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"
+      
+        />
+        <Script src="js/gsap.min.js"/>
+        <Script src="js/ScrollTrigger.min.js" />
+        <Script src="js/lenis.min.js" />
+        <Script
+          src="js/index.js"
+          type="module"
+        ></Script>
       </body>
     </html>
   );
