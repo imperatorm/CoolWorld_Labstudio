@@ -32,27 +32,6 @@
   font-size: 140px;
 }
 
-.info {
-  width: 100%;
-
-  & a {
-    position: absolute;
-    bottom: 5%;
-    right: 8%;
-    max-width: 227px;
-    border: 3px solid var(--color-blue);
-    border-radius: 16.8px;
-    background-color: var(--color-milk);
-    color: var(--color-blue);
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 25.92px;
-    padding: 15px 0;
-    width: 100%;
-    text-align: center;
-  }
-}
 .keepContent {
   height: 876px;
   position: relative;
@@ -106,6 +85,7 @@
     margin-top: 40px;
   }
 }
+
 .unsereWrap {
   padding-top: 100px;
 
@@ -118,6 +98,7 @@
     line-height: 61.56px;
   }
 }
+
 .lists {
   display: flex;
   flex-direction: column;
@@ -176,7 +157,7 @@
   animation: rotating 12s linear infinite;
 
   & text {
-    fill: var(--color-blue);
+    fill:var(--color-blue);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 0;
@@ -262,3 +243,56 @@
   }
 }
 
+.truck {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.truckInfo {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  user-select: none;
+
+    
+
+  & h3 {
+    font-weight: 600;
+    font-size: 180px;
+  }
+     & h3:nth-child(2) {
+          margin-top: 130px;
+     }
+     & p {
+      font-size: 37px;
+      font-weight: 500;
+     }
+}
+.scrollInfo {
+  position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 7px;
+    background-color: var(--color-milk);
+    border: 3px solid #4EBFEC;
+    border-radius: 16px;
+    display: flex;
+    gap: 15px;
+    & button {
+      color:var(--color-blue);
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 28.16px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 34px;
+      text-align: center;
+    }
+    & button:first-child {
+      background-color: var(--color-blue);
+      color: white;
+    }
+}

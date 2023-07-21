@@ -1,44 +1,44 @@
 "use client"
-import TheHeader from '@/components/TheHeader/TheHeader'
-import React, { useEffect, useRef } from 'react'
+import React  from 'react'
 import styles from "./KeepBereiche.module.scss"
-
-import { TitleAnimation } from '@/components/TitleAnimation/TitleAnimation';
-import icon01 from "@/assets/images/Icon01.png";
-import icon02 from "@/assets/images/Icon02.png";
-import icon03 from "@/assets/images/Icon03.png";
-import icon04 from "@/assets/images/Icon04.png";
+import icon01 from "@/assets/images/Icon01-milk.png";
+import icon02 from "@/assets/images/Icon02-milk.png";
+import icon03 from "@/assets/images/Icon03-milk.png";
+import icon04 from "@/assets/images/Icon04-milk.png";
 import Image from 'next/image';
 import ParallaxImg from '@/components/ParallaxImg/ParallaxImg';
 import TheFooter from '@/components/TheFooter/TheFooter';
 import CowsSection from '@/components/CowsSection/CowsSection';
 import homeParallax from "@/assets/images/home4.png";
+import TheHeaderSecond from '@/components/TheHeaderSecond/TheHeaderSecond';
+import cowBanner from "@/assets/images/cow-banner.png";
+import { TitleAnimation } from "@/components/TitleAnimation/TitleAnimation";
+import { Link } from 'react-scroll';
 const KeepBereiche = () => {
-  
   return (
     <div>
       <div
-        className='main-container'
+        className="main-container"
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
-        {/* <TheHeader /> */}
-        {/* <div>
-        <div className={styles.keepInfo}>
-          <TitleAnimation>
-            <span className={styles.firstTitle}>Keep</span>
-            <span className={styles.secondTitle}>Cool.</span>
-            <span className={styles.descTitle}>Enjoy the Summer.</span>
-          </TitleAnimation>
-        </div>
-      </div> */}
-        {/* <div className={`${styles.keepContent} content`}> */}
-        {/* <div
-          ref={initialRef}
-          className={`${styles.keepBanner} canvas-wrap`}
-          style={{ backgroundImage: `url(${girlImg.src})` }}
-        ></div> */}
-        {/* </div> */}
-        <div className={`main-container ${styles.infoWrap}`}>
+        <TheHeaderSecond>
+          <div
+            className={styles.content}
+            style={{ backgroundImage: `url(${cowBanner.src})` }}
+          >
+            <div className={styles.info}>
+              <div className={styles.keepInfo}>
+                <TitleAnimation>
+                  <span className={styles.firstTitle}>Keep</span>
+                  <span className={styles.secondTitle}>Cool.</span>
+                  <span className={styles.descTitle}>No more nasty Flys.</span>
+                </TitleAnimation>
+              </div>
+              <Link href="">Gleich anfrage</Link>
+            </div>
+          </div>
+        </TheHeaderSecond>
+        <div className={`${styles.infoWrap}`}>
           <h3>KeepCool: </h3>
           <h3>Erfrischende Kühlungsbereiche</h3>
           <h3>für Gastro, Privat und Tierwelt</h3>
@@ -97,211 +97,211 @@ const KeepBereiche = () => {
           </div>
         </div>
       </div>
-        <ParallaxImg />
-        <div className={styles.einWrap}>
-          <h4>Ein Einblick in unsere Welt.</h4>
-          <div className={`${styles.circleWrap} main-container`}>
-            <div className={styles.circleItems}>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
+      <ParallaxImg />
+      <div className={styles.einWrap}>
+        <h4>Ein Einblick in unsere Welt.</h4>
+        <div className={`${styles.circleWrap} main-container`}>
+          <div className={styles.circleItems}>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
                 />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
-                />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
-                />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
             </div>
-            <div className={styles.circleItems}>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
                 />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
-                />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
             </div>
-            <div className={styles.circleItems}>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
                 />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className={styles.circleItems}>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
                 />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.circleItem}>
-                <Image
-                  src={homeParallax.src}
-                  alt={"img"}
-                  width={homeParallax.width}
-                  height={homeParallax.height}
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
                 />
-                <svg viewBox="0 0 200 200" className={styles.svgCover}>
-                  <path
-                    id="textPath"
-                    d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-                    transform="translate(100,100)"
-                    fill="none"
-                    strokeWidth={0}
-                  />
-                  <g>
-                    <text textAnchor="start">
-                      <textPath xlinkHref="#textPath" startOffset="0%">
-                        Das ist eine sehr schöne Beschreibung.
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className={styles.circleItems}>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
+                />
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
+                />
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div className={styles.circleItem}>
+              <Image
+                src={homeParallax.src}
+                alt={"img"}
+                width={homeParallax.width}
+                height={homeParallax.height}
+              />
+              <svg viewBox="0 0 200 200" className={styles.svgCover}>
+                <path
+                  id="textPath"
+                  d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                  transform="translate(100,100)"
+                  fill="none"
+                  strokeWidth={0}
+                />
+                <g>
+                  <text textAnchor="start">
+                    <textPath xlinkHref="#textPath" startOffset="0%">
+                      Das ist eine sehr schöne Beschreibung.
+                    </textPath>
+                  </text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
-        <CowsSection />
+      </div>
+      <CowsSection />
       <TheFooter />
     </div>
   );

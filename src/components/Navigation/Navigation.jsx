@@ -7,7 +7,7 @@ import LanguageChoose from '../LanguageChoose/LanguageChoose';
 import { AnimatePresence, motion } from "framer-motion";
 
 
-const Navigation = () => {
+const Navigation = ({ modelStyle }) => {
   const [menuActive, setActive] = useState(false);
 
   return (
@@ -19,9 +19,9 @@ const Navigation = () => {
             : styles.navUse
         }
       >
-        <LanguageChoose />
+        <LanguageChoose modelStyle={modelStyle} />
         <p
-          className={"hbtn hb-fill-left"}
+          className={`${modelStyle ? styles.modeBlue: null} hbtn hb-fill-left`}
           onClick={() => setActive((prev) => !prev)}
         >
           M
@@ -52,6 +52,6 @@ const Navigation = () => {
       </AnimatePresence>
     </div>
   );
-}
+};
 
 export default Navigation

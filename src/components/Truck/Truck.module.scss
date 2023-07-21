@@ -1,0 +1,8 @@
+.imgWrap {
+  text-align: center;
+  & img {
+    max-width: 1200px;
+    height: auto;
+    object-fit: contain;
+  }
+}

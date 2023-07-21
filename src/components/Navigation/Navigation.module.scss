@@ -23,52 +23,6 @@
     letter-spacing: 0;
     line-height: 22px;
     cursor: pointer;
-    // transition: var(--transition);
-    
-    
-      // &::after,
-      // &::before {
-      //   content: " ";
-      //   display: block;
-      //   position: absolute;
-      //   width: 100%;
-      //   top: 0;
-      //   bottom: 0;
-      //   right: 0;
-      //   background: red;
-      //   z-index: -1;
-      // }
-    
-      //    &::before {
-      //   /*   background: blue; */
-      //   transform: translateX(-100%);
-      //   z-index: 1;
-      // }
-    
-      //       &:hover:before {
-      //   transform: translateX(0);
-      //   transition: transform 350ms ease;
-      // }
-    
-      //       &::after {
-      //   z-index: 0;
-      //   transform: translateX(100%);
-      //   transition: none;
-      //   transition: transform 350ms ease;
-      // }
-    
-      //    &:hover:after {
-      //   opacity: 1;
-      //   transform: translateX(0);
-      //   transition: transform 350ms 360ms ease;
-      // }
-
-    // &:hover {
-    //   background-color: var(--color-milk);
-    //   color: var(--color-blue);
-    //   transition: var(--transition);
-    //   border: 2px solid transparent;
-    // }
   }
   & > .navUse {
     display: flex;
@@ -121,7 +75,12 @@
 }
 
 
-
+.modeBlue {
+  background-color: var(--color-blue);
+  &:hover {
+    border: 2px solid var(--color-blue);
+  }
+}
 
 .hbFillLeft::before {
   position: absolute;

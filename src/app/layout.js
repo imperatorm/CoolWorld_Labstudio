@@ -72,7 +72,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const pathNameHeader = ["/bereiche/keep",];
+  const pathNameHeader = ["/bereiche/keep", "/world"];
   return (
     <html lang="en">
       <body className={replica.className}>

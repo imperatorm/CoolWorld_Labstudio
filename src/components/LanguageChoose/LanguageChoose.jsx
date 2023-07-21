@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useState } from "react";
-import styles from "./LanguageChoose.module.scss";
+import stylesMilk from "./LanguageChooseMilk.module.scss";
+import stylesBlue from "./LanguageChoose.module.scss";
 import useHover from "@/hooks/useHover";
 
 const langData = [
@@ -29,7 +30,12 @@ const idHover = {
   
 }
 
-const LanguageChoose = () => {
+const LanguageChoose = ({modelStyle=false}) => {
+  const styles = modelStyle ? stylesMilk : stylesBlue
+  const colorStyle = modelStyle
+    ? { color: "var(--color-milk)" }
+    : { color: "var(--color-blue)" };
+
   const [langChoose, setLangChoose] = useState(langData);
   const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
   const [tabHover,setTabHover] = useState(3)
@@ -62,9 +68,7 @@ const LanguageChoose = () => {
                   onClick={() => handleClick(lang.id)}
                   key={lang.id}
                   onMouseEnter={() => setTabHover(idx)}
-                  style={
-                    idx === tabHover ? { color: "var(--color-blue)" } : null
-                  }
+                  style={idx === tabHover ? colorStyle : null}
                   onMouseLeave={() => setTabHover(3)}
                 >
                   {lang.name}
@@ -83,7 +87,7 @@ const LanguageChoose = () => {
                   setTabHover(2);
                 }}
                 onMouseLeave={() => setTabHover(3)}
-                style={2 === tabHover ? { color: "var(--color-blue)" } : null}
+                style={2 === tabHover ? colorStyle : null}
                 onClick={() => handleClick(lang.id)}
                 key={lang.id}
               >

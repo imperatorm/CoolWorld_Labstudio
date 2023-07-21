@@ -15,7 +15,7 @@ const CowsSection = () => {
   const cowsImgOneRef = useRef(null)
   const cowsImgSecondRef = useRef(null)
   const cowsImgThreeRef = useRef(null)
-const component = useRef();
+  const component = useRef();
 
   useLayoutEffect(() => {
     if (component.current) {
