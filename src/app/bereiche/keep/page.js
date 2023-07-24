@@ -1,10 +1,10 @@
 "use client"
 import React  from 'react'
 import styles from "./KeepBereiche.module.scss"
-import icon01 from "@/assets/images/Icon01-milk.png";
-import icon02 from "@/assets/images/Icon02-milk.png";
-import icon03 from "@/assets/images/Icon03-milk.png";
-import icon04 from "@/assets/images/Icon04-milk.png";
+import icon01 from "@/assets/images/icon01-milk.png";
+import icon02 from "@/assets/images/icon02-milk.png";
+import icon03 from "@/assets/images/icon03-milk.png";
+import icon04 from "@/assets/images/icon04-milk.png";
 import Image from 'next/image';
 import ParallaxImg from '@/components/ParallaxImg/ParallaxImg';
 import TheFooter from '@/components/TheFooter/TheFooter';
