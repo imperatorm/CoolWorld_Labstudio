@@ -8,12 +8,14 @@ import { infoFirst, infoSecond } from "@/date/date";
 import ParallaxImg from "@/components/ParallaxImg/ParallaxImg";
 import KeepCool from "@/components/KeepCool/KeepCool";
 import TheFooter from "@/components/TheFooter/TheFooter";
+import TheHeader from "@/components/TheHeader/TheHeader";
 
 
 
 export default function Home() {
   return (
     <div>
+      <TheHeader/>
       <HeroSection />
       <h2 className={styles.infoText}>
         Genieße eine angenehme Abkühlung im Freien mit unserer innovativen

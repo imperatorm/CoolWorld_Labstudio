@@ -1,10 +1,12 @@
 import TheFooter from '@/components/TheFooter/TheFooter';
 import styles from "./Datenschutz.module.scss"
 import React from 'react'
+import TheHeader from '@/components/TheHeader/TheHeader';
 
 const Datenschutz = () => {
   return (
     <div>
+      <TheHeader />
       <div className={`${styles.dateContent} main-container`}>
         <h2>Datenschutz</h2>
         <p>

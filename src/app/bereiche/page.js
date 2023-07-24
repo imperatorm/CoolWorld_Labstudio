@@ -2,10 +2,12 @@ import CowsSection from "@/components/CowsSection/CowsSection";
 import styles from "./Bereiche.module.scss"
 import React from "react";
 import TheFooter from "@/components/TheFooter/TheFooter";
+import TheHeader from "@/components/TheHeader/TheHeader";
 
 const Bereiche = () => {
   return (
     <div>
+      <TheHeader />
       <CowsSection />
       <div className={styles.milkWrap}>
         <div className={`main-container ${styles.infoWrap}`}>

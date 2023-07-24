@@ -1,10 +1,7 @@
-"use client"
-import TheHeader from '@/components/TheHeader/TheHeader';
 import './globals.css'
 import localFont from "next/font/local";
 import Script from 'next/script'
-import TheFooter from '@/components/TheFooter/TheFooter';
-import { usePathname } from "next/navigation";
+
 
 const replica = localFont({
   src: [
@@ -71,13 +68,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  const pathNameHeader = ["/bereiche/keep", "/world"];
+ 
   return (
     <html lang="en">
       <body className={replica.className}>
-        {!pathNameHeader.includes(pathname) && <TheHeader />}
-        <main>{children}</main>
+  
+        <div>{children}</div>
         {/* <TheFooter /> */}
         <Script
           src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"

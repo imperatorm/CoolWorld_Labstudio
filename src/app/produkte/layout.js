@@ -1,3 +1,4 @@
+import TheHeader from "@/components/TheHeader/TheHeader";
 
 
 
@@ -9,6 +10,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
+      <TheHeader />
       {children}
     </>
   );
