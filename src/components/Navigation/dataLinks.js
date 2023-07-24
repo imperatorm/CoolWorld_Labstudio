@@ -18,7 +18,7 @@ export const links = [
   {
     id: uuidv4(),
     title: "CoolWorld",
-    href: "/cool-world",
+    href: "/world",
   },
   {
     id: uuidv4(),
