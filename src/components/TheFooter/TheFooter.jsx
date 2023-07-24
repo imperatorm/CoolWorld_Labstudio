@@ -24,11 +24,9 @@ const TheFooter = () => {
               </li>
               <li>
                 <Link href={"/world"}>CoolWorld</Link>
-                
               </li>
               <li>
                 <Link href={"/kontakt"}>Kontakt</Link>
-                
               </li>
             </ul>
           </nav>
@@ -40,7 +38,7 @@ const TheFooter = () => {
             <nav className={styles.socialNav}>
               <ul>
                 <li>
-                  <Link href={"/impressum"}>Impressum</Link>
+                  <Link href={"/datenschutz"}>Impressum</Link>
                 </li>
                 <li>
                   <Link href={"/datenschutz"}>Datenschutz</Link>

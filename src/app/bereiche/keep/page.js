@@ -34,7 +34,7 @@ const KeepBereiche = () => {
                   <span className={styles.descTitle}>No more nasty Flys.</span>
                 </TitleAnimation>
               </div>
-              <Link href="">Gleich anfrage</Link>
+              <Link href="/kontakt">Gleich anfrage</Link>
             </div>
           </div>
         </TheHeaderSecond>

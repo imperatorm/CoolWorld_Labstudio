@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
-import styles from "./Home.module.scss"
+import styles from "./Home.module.scss";
 import VideoScroll from "@/components/VideoScroll/VideoScroll";
 import CowsSection from "@/components/CowsSection/CowsSection";
 import InfoSection from "@/components/InfoSection/InfoSection";
@@ -10,28 +10,28 @@ import KeepCool from "@/components/KeepCool/KeepCool";
 import TheFooter from "@/components/TheFooter/TheFooter";
 import TheHeader from "@/components/TheHeader/TheHeader";
 
-
-
 export default function Home() {
   return (
-    <div>
-      <TheHeader/>
-      <HeroSection />
-      <h2 className={styles.infoText}>
-        Genieße eine angenehme Abkühlung im Freien mit unserer innovativen
-        Sprühnebelkühlung. Schaffe eine erfrischende Umgebung, um die Natur und
-        deinen Lifestyle auch an den heißesten Tagen zu genießen.
-      </h2>
-      <VideoScroll />
+    <>
+      <TheHeader />
+      <div>
+        <HeroSection />
+        <h2 className={styles.infoText}>
+          Genieße eine angenehme Abkühlung im Freien mit unserer innovativen
+          Sprühnebelkühlung. Schaffe eine erfrischende Umgebung, um die Natur
+          und deinen Lifestyle auch an den heißesten Tagen zu genießen.
+        </h2>
+        <VideoScroll />
 
-      <div style={{ height: "25vh" }}></div>
-      <CowsSection />
-      <InfoSection info={infoFirst} />
-      <ParallaxImg />
-      <ProducteSection />
-      <InfoSection info={infoSecond} />
-      <KeepCool />
+        <div style={{ height: "25vh" }}></div>
+        <CowsSection />
+        <InfoSection info={infoFirst} />
+        <ParallaxImg />
+        <ProducteSection />
+        <InfoSection info={infoSecond} />
+        <KeepCool />
+      </div>
       <TheFooter />
-    </div>
+    </>
   );
 }

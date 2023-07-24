@@ -73,7 +73,7 @@ const Kontakt = () => {
                 </Link>
               </li>
             </ul>
-            <button>Rufen Sie uns an</button>
+            <Link className={styles.telLink} href={"tel:+43 676 560 62 22"}>Rufen Sie uns an</Link>
             <button>Finden Sie uns bei Goolge Maps</button>
           </div>
         </div>

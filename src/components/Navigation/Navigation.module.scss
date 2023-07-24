@@ -30,9 +30,13 @@
     gap: 30px;
     padding-top: 2px;
     visibility: hidden;
+    justify-content: flex-end;
   }
   & > .navUseActive {
     visibility: visible;
+  }
+  @media only screen and (max-width: 768px) {
+    max-width: 350px;
   }
 }
 .nav {
@@ -42,20 +46,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  
-  
-
-}
-@keyframes slide-in {
-  0% {
-    right: -100px;
-    /* Start position */
+  @media only screen and (max-width: 768px) {
+      max-width: 350px;
   }
 
-  100% {
-    left: 0;
-    /* End position */
-  }
 }
 
 .hbtn {

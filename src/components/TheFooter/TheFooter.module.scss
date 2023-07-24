@@ -8,7 +8,7 @@
   justify-content: flex-end;
   color: var(--color-blue);
   background-color: var(--color-milk);
-  padding: 150px 0;
+  padding: 150px 15px;
 }
 
 .footerContent {
@@ -24,15 +24,30 @@
   max-width: 936px;
   width: 100%;
   margin: 0 auto;
+  padding:0 15px;
+  
+  
+  @media only screen and (max-width: 900px) {
+    max-width: 100%;
+  }
 
   & ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 900px) {
+        gap:10px;
+       
+      }
 
     & li {
       font-size: 35px;
       line-height: 42px;
+      @media only screen and (max-width: 900px) {
+          font-size: 25px;
+          line-height: 20px;
+        }
     }
 
     & li:not(:last-child) {
@@ -81,6 +96,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media only screen and (max-width: 900px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
 }
 
 .socialNav {

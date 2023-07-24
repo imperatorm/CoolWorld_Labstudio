@@ -5,7 +5,9 @@
   align-items: center;
   height: 95%;
   padding-bottom: 38px;
-
+  @media only screen and (max-width: 768px) {
+      justify-content: center;
+  }
   &>div {
     width: 100%;
   }
@@ -26,6 +28,10 @@
     font-size: 57px;
     touch-action: manipulation;
     width: 100%;
+    @media only screen and (max-width: 768px) {
+        font-size: 38px;
+        line-height: 30px;
+    }
   }
 
 }
