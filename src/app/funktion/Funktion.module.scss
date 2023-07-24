@@ -97,7 +97,7 @@
   flex-direction: column;
   gap: 19px;
 
-  & button {
+  & a {
     background-color: var(--color-blue);
     color: var(--color-milk);
     font-family: var(--font-replica);
@@ -109,6 +109,7 @@
     border-radius: 16.8px;
     max-width: 224px;
     width: 100%;
+    text-align: center;
   }
 }
 .circleWrap {

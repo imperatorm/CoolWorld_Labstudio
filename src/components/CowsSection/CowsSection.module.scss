@@ -85,7 +85,7 @@
      }
 }
 .btnCows {
-  display: block;
+  display: table;
   border: 3px solid #F3F1DD;
   border-radius: 16.8px;
   background-color: #F3F1DD;
@@ -96,7 +96,7 @@
   line-height: 38.88px;
   padding: 10px 60px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 250px;
 }
 .cownsWrap {
   position: absolute;

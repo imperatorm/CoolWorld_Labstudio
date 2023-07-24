@@ -3,6 +3,7 @@ import KeepCoolInfo from './KeepCoolInfo';
 import { TitleAnimation } from '../TitleAnimation/TitleAnimation';
 import styles from "./KeepCool.module.scss"
 import girlImg from "@/assets/images/girl-min.png";
+import Link from 'next/link';
 const KeepCool = () => {
   return (
     <div className={` main-container`}>
@@ -24,7 +25,7 @@ const KeepCool = () => {
         <h3 className={styles.keepFooterInfo}>
           Unt, offic to et omnihit, inus vit, consedit, consequo quo tenimus
         </h3>
-        <button className={styles.btnWrap}>KeepCool.World</button>
+        <Link href="/world" className={styles.btnWrap}>KeepCool.World</Link>
       </div>
     </div>
   );

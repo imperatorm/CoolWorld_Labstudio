@@ -23,7 +23,7 @@ const TheFooter = () => {
                 <Link href={"/produkte"}>Produkte</Link>
               </li>
               <li>
-                <Link href={"/cool-world"}>CoolWorld</Link>
+                <Link href={"/world"}>CoolWorld</Link>
                 
               </li>
               <li>

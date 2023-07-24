@@ -115,7 +115,9 @@ const ProducteSection = () => {
           </svg>
         </Link>
       </div>
-      <button className={styles.btnCows}>KeepColl.Bar</button>
+      <Link href="/produkte/keep" className={styles.btnCows}>
+        KeepColl.Bar
+      </Link>
     </div>
   );
 };

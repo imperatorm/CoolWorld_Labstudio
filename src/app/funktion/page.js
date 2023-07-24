@@ -88,8 +88,8 @@ const Funktion = () => {
               </div>
             </div>
             <div className={styles.btnWrap}>
-              <button>Unsere Bereiche</button>
-              <button>Unsere Produkte</button>
+              <Link href={"/bereiche"}>Unsere Bereiche</Link>
+              <Link href={"/produkte"}>Unsere Produkte</Link>
             </div>
           </div>
           <ParallaxImg />

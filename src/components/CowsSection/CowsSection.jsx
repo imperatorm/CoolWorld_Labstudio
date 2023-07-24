@@ -7,6 +7,7 @@ import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Power0 } from "gsap-trial";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -112,7 +113,8 @@ tl.add("anim_start3", "+=0")
       <div className={styles.textFill} style={{ height: "100vh" }}>
         <h3 className="textWaves">Bereiche</h3>
         <div className={styles.cownsWrap} ref={cowsRef}>
-          <div
+          <Link
+            href="/bereiche/keep"
             className={`${styles.imgWrap1} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -134,7 +136,7 @@ tl.add("anim_start3", "+=0")
                 </text>
               </g>
             </svg>
-          </div>
+          </Link>
           <div
             className={`${styles.imgWrap2} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
@@ -182,8 +184,10 @@ tl.add("anim_start3", "+=0")
             </svg>
           </div>
         </div>
+        <Link href={"/bereiche/keep"} className={styles.btnCows}>
+          Tierwelt
+        </Link>
       </div>
-      {/* <button className={styles.btnCows}>Tierwelt</button> */}
     </div>
   );
 };
