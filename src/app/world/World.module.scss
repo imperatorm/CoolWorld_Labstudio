@@ -66,6 +66,7 @@
 
 .infoWrap {
   padding-top: 60px;
+  padding-bottom: 110px;
 
   & h3 {
     color: var(--color-milk);
@@ -246,8 +247,9 @@
 .truck {
   display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin: 100px 0;
+    padding-right: 194px;
 }
 
 .truckInfo {
@@ -260,7 +262,7 @@
 
   & h3 {
     font-weight: 600;
-    font-size: 180px;
+      font-size: 256px;
   }
      & h3:nth-child(2) {
           margin-top: 130px;
@@ -268,20 +270,25 @@
      & p {
       font-size: 37px;
       font-weight: 500;
+      padding-top: 67px;
      }
 }
 .scrollInfo {
-  position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: sticky;
+    left: 0;
     padding: 7px;
     background-color: var(--color-milk);
     border: 3px solid #4EBFEC;
     border-radius: 16px;
     display: flex;
     gap: 15px;
-    & button {
+    top: 0;
+    max-width: 520px;
+    margin: 0 auto;
+    bottom: 0;
+    top: 90%;
+    z-index: 999;
+    & a {
       color:var(--color-blue);
       padding: 8px 16px;
       border-radius: 12px;
@@ -291,7 +298,7 @@
       line-height: 34px;
       text-align: center;
     }
-    & button:first-child {
+    & a:first-child {
       background-color: var(--color-blue);
       color: white;
     }

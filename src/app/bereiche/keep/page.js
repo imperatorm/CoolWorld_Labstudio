@@ -18,7 +18,8 @@ const KeepBereiche = () => {
   return (
     <div>
       <div
-        className="main-container"
+        className={`main-container ${styles.wrapper}`}
+        
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>

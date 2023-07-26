@@ -1,5 +1,5 @@
-"use client"
-import React, { useRef } from 'react'
+"use client";
+import React, { useRef } from "react";
 import styles from "./World.module.scss";
 import Image from "next/image";
 import TheFooter from "@/components/TheFooter/TheFooter";
@@ -7,19 +7,19 @@ import homeParallax from "@/assets/images/home4.png";
 import TheHeaderSecond from "@/components/TheHeaderSecond/TheHeaderSecond";
 import girlMin from "@/assets/images/girl-min.png";
 import { TitleAnimation } from "@/components/TitleAnimation/TitleAnimation";
-import Truck from '@/components/Truck/Truck';
-import InfoSection from '@/components/InfoSection/InfoSection';
-import { infoWorld } from '@/date/date';
-import Link from 'next/link';
+import Truck from "@/components/Truck/Truck";
+import InfoSection from "@/components/InfoSection/InfoSection";
+import { infoWorld } from "@/date/date";
+import Link from "next/link";
 const World = () => {
-  const truckRef = useRef(null)
+  const truckRef = useRef(null);
   return (
     <div>
       <div className={`${styles.scrollInfo}`}>
-        <Link href="/world" className="active">
-          KeepColl.World
+        <Link href="/world">KeepColl.World</Link>
+        <Link className="active" href="/world-truck">
+          Keep Cool.Truck
         </Link>
-        <Link href="/world-truck">Keep Cool.Truck</Link>
       </div>
       <div
         className="main-container"
@@ -281,6 +281,6 @@ const World = () => {
       <TheFooter />
     </div>
   );
-}
+};
 
-export default World
+export default World;

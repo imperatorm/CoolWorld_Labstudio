@@ -31,7 +31,7 @@ const CowsSection = () => {
           scrub: true,
           pin: true,
           // pinSpacer:false,
-          start: "top top",
+          start: "top 25%",
           end: "bottom",
           toggleActions: "restart reverse none none",
           // markers: true,
@@ -137,7 +137,8 @@ tl.add("anim_start3", "+=0")
               </g>
             </svg>
           </Link>
-          <div
+          <Link
+            href="/bereiche/keep"
             className={`${styles.imgWrap2} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -159,8 +160,9 @@ tl.add("anim_start3", "+=0")
                 </text>
               </g>
             </svg>
-          </div>
-          <div
+          </Link>
+          <Link
+            href="/bereiche/keep"
             className={`${styles.imgWrap3} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -182,7 +184,7 @@ tl.add("anim_start3", "+=0")
                 </text>
               </g>
             </svg>
-          </div>
+          </Link>
         </div>
         <Link href={"/bereiche/keep"} className={styles.btnCows}>
           Tierwelt

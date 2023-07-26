@@ -5,10 +5,11 @@
   background-size: cover;
   opacity: 0;
   background-repeat: repeat;
-  max-width: 1440px;
+  // max-width: ;
   width: 100%;
   /* margin-right: auto; */
   border-radius: 25px 25px 0 0;
+
   & > .content {
     margin-top: 0;
   }
@@ -79,7 +80,8 @@
 }
 
 .keepCoolInfo {
-  margin: 60px 0;
+  margin-top: 150px;
+  margin-bottom: 67px;
   & h3 {
     & p {
       font-size: 70px;

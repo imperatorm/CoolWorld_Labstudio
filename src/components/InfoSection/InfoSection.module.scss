@@ -1,7 +1,7 @@
 .infoWrap {
   display: flex;
   align-items: flex-start;
-  gap: 120px;
+  gap: 112px;
   margin-bottom: 37px;
   justify-content: center;
   font-size: 25px;
@@ -9,19 +9,24 @@
   line-height: 30px;
   color:var(--color-milk);
   margin-top: 80px;
+  max-width: 1555px;
+  width:100%;
+  margin: 0 auto;
 }
 
 .litInfo {
   max-width: 224px;
   width: 100%;
   text-align: left;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .bigInfo {
   text-align: left;
   width: 100%;
   max-width: 740px;
+  font-weight: 400;
+  
 }
 
 .infoBtn {
@@ -30,10 +35,11 @@
   border-radius: 16.8px;
   background-color: var(--color-milk);
   color: var(--color-blue);
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 38.88px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.92px;
   padding: 10px 60px;
-  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 35px;
+
 }

@@ -2,122 +2,195 @@
 import React, { useEffect,useLayoutEffect, useRef } from "react";
 import styles from "./ProducteSection.module.scss";
 import barImg from "@/assets/images/bar_blue.png"
+import shapeImg from "@/assets/images/shape3.png";
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import { Power0 } from "gsap-trial";
 gsap.registerPlugin(ScrollTrigger);
 
 
 const ProducteSection = () => {
-  const cowsRef = useRef(null);
-  const cowsImgOneRef = useRef(null);
-  const cowsImgSecondRef = useRef(null);
-  const cowsImgThreeRef = useRef(null);
+  const proRef = useRef(null);
+  const proImgOneRef = useRef(null);
+    const component = useRef();
+  useLayoutEffect(() => {
+    if (component.current) {
+      // let ctx = gsap.context(() => {
+      let contents = gsap.utils.toArray(".circle-prod");
 
-  // useLayoutEffect(() => {
-  //     let ctx = gsap.context(() => {
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: cowsImgOneRef.current,
-  //           start: "-50% 30%",
-  //           // pin: true,
-  //           // pinSpacing:false,
-  //           scrub: 1,
-  //           toggleActions: "restart reverse none none",
-  //           // play pause resume reverse restart reset complete none
-  //           // onEnter onLeave onEnterBack onLeaveBack
-  //           // markers: true,
-  //         },
-  //       });
-  //       tl.to(cowsImgOneRef.current, {
-  //         x: "150%",
-  //         duration: 3,
-  //       });
-  //     }, cowsImgOneRef);
+      gsap.set(contents, { autoAlpha: 0, x: 500 });
+      gsap.set(".textWavesProd", {
+        backgroundImage: `url(${shapeImg.src})`,
+        backgroundPositionY: "-200%",
+      });
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: component.current,
+          scrub: true,
+          pin: true,
+          // pinSpacer:false,
+          start: "top 25%",
+          end: "bottom",
+          toggleActions: "restart reverse none none",
+          // markers: true,
+        },
+      });
+      tl.add("anim_1", "+=0")
+        .to(
+          contents[0],
+          {
+            keyframes: { x: [500, 185, -357] },
+            duration: 5,
+            autoAlpha: 1,
+            ease: Power0.easeNone,
+          },
+          "anim_1"
+        )
+        .to(
+          ".textWavesProd",
+          {
+            backgroundPositionY: "-50%",
+            // backgroundPositionX: "500px",
+            duration: 5,
+            ease: Power0.easeNone,
+            // timeScale: 0.1,
+            // autoAlpha: 1,
+          },
+          "anim_1"
+        );
+      tl.add("anim_2", "+=0")
+        .to(
+          ".textWavesProd",
+          {
+            backgroundPositionY: "-5%",
+            // backgroundPositionX: "800px",
+            duration: 5,
+            ease: Power0.easeNone,
+            // timeScale: 0.1,
+            // autoAlpha: 1,
+          },
+          "anim_2"
+        )
+        .to(
+          contents[1],
+          {
+            keyframes: { x: [500, 185, 43] },
+            duration: 5,
+            ease: Power0.easeNone,
+            autoAlpha: 1,
+          },
+          "anim_2"
+        );
+      tl.add("anim_3", "+=0")
+        .to(
+          contents[2],
+          {
+            keyframes: { x: [500, 185, 10] },
+            duration: 5,
+            ease: Power0.easeNone,
+            autoAlpha: 1,
+          },
+          "anim_3"
+        )
+        .to(
+          ".textWavesProd",
+          {
+            backgroundPositionY: "100%",
+            // backgroundPositionX: "1000px",
+            duration: 5,
+            ease: Power0.easeNone,
 
-  //     return () => ctx.revert();
-  // }, []);
+            // autoAlpha: 1,
+          },
+          "anim_3"
+        );
+    }
+  }, [component]);
+
   return (
-    <div>
-      <div className={styles.textFill} ref={cowsRef}>
-        <h3>Produkte</h3>
-        <Link
-          href={"/produkte/keep"}
-          className={`${styles.imgWrap1} ${styles.imgWrap}`}
-          ref={cowsImgOneRef}
-        >
-          <Image src={barImg} alt={"bar"} />
-          <svg viewBox="0 0 200 200" className={styles.svgCover}>
-            <path
-              id="textPath"
-              d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-              transform="translate(100,100)"
-              fill="none"
-              strokeWidth={0}
-            />
-            <g>
-              <text textAnchor="start">
-                <textPath xlinkHref="#textPath" startOffset="0%">
-                  gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
-                  zu gehe zu gehe zu
-                </textPath>
-              </text>
-            </g>
-          </svg>
-        </Link>
-        <Link
-          href={"/produkte/keep"}
-          className={`${styles.imgWrap2} ${styles.imgWrap}`}
-          ref={cowsImgOneRef}
-        >
-          <Image src={barImg} />
-          <svg viewBox="0 0 200 200" className={styles.svgCover}>
-            <path
-              id="textPath"
-              d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-              transform="translate(100,100)"
-              fill="none"
-              strokeWidth={0}
-            />
-            <g>
-              <text textAnchor="start">
-                <textPath xlinkHref="#textPath" startOffset="0%">
-                  gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
-                  zu gehe zu gehe zu
-                </textPath>
-              </text>
-            </g>
-          </svg>
-        </Link>
-        <Link
-          href={"/produkte/keep"}
-          className={`${styles.imgWrap3} ${styles.imgWrap}`}
-          ref={cowsImgOneRef}
-        >
-          <Image src={barImg} />
-          <svg viewBox="0 0 200 200" className={styles.svgCover}>
-            <path
-              id="textPath"
-              d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
-              transform="translate(100,100)"
-              fill="none"
-              strokeWidth={0}
-            />
-            <g>
-              <text textAnchor="start">
-                <textPath xlinkHref="#textPath" startOffset="0%">
-                  gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
-                  zu gehe zu gehe zu
-                </textPath>
-              </text>
-            </g>
-          </svg>
+    <div style={{ height: "100vh" }} ref={component}>
+      <div className={styles.textFill} style={{ height: "100vh" }} ref={proRef}>
+        <h3 className="textWavesProd">Produkte</h3>
+        <div className={styles.cownsWrap} ref={proRef}>
+          <Link
+            href={"/produkte/keep"}
+            className={`${styles.imgWrap1} ${styles.imgWrap} circle-prod`}
+            ref={proImgOneRef}
+          >
+            <Image src={barImg} alt={"bar"} />
+            <svg viewBox="0 0 200 200" className={styles.svgCover}>
+              <path
+                id="textPath"
+                d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                transform="translate(100,100)"
+                fill="none"
+                strokeWidth={0}
+              />
+              <g>
+                <text textAnchor="start">
+                  <textPath xlinkHref="#textPath" startOffset="0%">
+                    gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
+                    zu gehe zu gehe zu
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+          </Link>
+          <Link
+            href={"/produkte/keep"}
+            className={`${styles.imgWrap2} ${styles.imgWrap} circle-prod`}
+            ref={proImgOneRef}
+          >
+            <Image src={barImg} />
+            <svg viewBox="0 0 200 200" className={styles.svgCover}>
+              <path
+                id="textPath"
+                d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                transform="translate(100,100)"
+                fill="none"
+                strokeWidth={0}
+              />
+              <g>
+                <text textAnchor="start">
+                  <textPath xlinkHref="#textPath" startOffset="0%">
+                    gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
+                    zu gehe zu gehe zu
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+          </Link>
+          <Link
+            href={"/produkte/keep"}
+            className={`${styles.imgWrap3} ${styles.imgWrap} circle-prod`}
+            ref={proImgOneRef}
+          >
+            <Image src={barImg} />
+            <svg viewBox="0 0 200 200" className={styles.svgCover}>
+              <path
+                id="textPath"
+                d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0"
+                transform="translate(100,100)"
+                fill="none"
+                strokeWidth={0}
+              />
+              <g>
+                <text textAnchor="start">
+                  <textPath xlinkHref="#textPath" startOffset="0%">
+                    gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
+                    zu gehe zu gehe zu
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+          </Link>
+        </div>
+        <Link href="/produkte/keep" className={styles.btnCows}>
+          KeepColl.Bar
         </Link>
       </div>
-      <Link href="/produkte/keep" className={styles.btnCows}>
-        KeepColl.Bar
-      </Link>
     </div>
   );
 };

@@ -33,7 +33,7 @@ const Truck = () => {
            maskEl,
            {
              duration: 1,
-             x: "150%",
+             x: "25%",
              stagger: 1,
              ease: Power0.easeNone,
            },

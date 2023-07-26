@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1440px;
+  --max-width: 1808px;
   --border-radius: 12px;
   --color-blue: #4EBFEC;
   --color-milk: #F3F1DD;
@@ -7,7 +7,7 @@
   --color-black: #050000;
   --color-white: #fff;
   --transition: all 0.3s linear;
- 
+
 }
 
 
@@ -132,7 +132,7 @@ a {
   max-width: var(--max-width);
   width: 100%;
   margin: 0 auto;
-  /* padding: 0 15px; */
+  padding: 0 15px;
 }
 
 
@@ -243,7 +243,7 @@ html.lenis {
   position: relative;
   overflow: hidden;
   padding: 8px 20px;
-  margin: 0px 3px 6px;
+
   text-align: center;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -353,32 +353,44 @@ html.lenis {
 }
 
 .disable {
-  mask-image:none !important;
+  mask-image: none !important;
 }
- .fil1 {
-   fill: none
- }
 
- .fil2 {
-   fill: #4EBFEC
- }
+.fil1 {
+  fill: none
+}
 
- .fil0 {
-   fill: #4EBFEC
- }
- .videoParallax {
+.fil2 {
+  fill: #4EBFEC
+}
+
+.fil0 {
+  fill: #4EBFEC
+}
+
+.videoParallax {
   min-height: 100%;
   position: fixed;
   top: 0;
   z-index: -999;
- }
- .split-lines {
+}
+
+.split-words {
   display: flex;
- }
- .split-words {
-  display: flex;
- 
- }
- .split-charts {
+
+}
+
+.split-charts {
   opacity: 0;
- }
+}
+
+.hero-wrapper {
+position: fixed;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -9999;
+}

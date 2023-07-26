@@ -9,7 +9,7 @@ const TheHeader = () => {
     <header className={`main-container ${styles.header}`}>
       <div className={styles.imgWrap}>
         <Link href={'/'}>
-        <Image src="/logo.png" alt="Logo" width={180} height={37} priority />
+        <Image src="/logo.png" alt="Logo" width={314} height={58} priority />
         </Link>
       </div>
       <Navigation />

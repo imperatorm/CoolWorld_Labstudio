@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import stylesMilk from "./LanguageChooseMilk.module.scss";
 import stylesBlue from "./LanguageChoose.module.scss";
 import useHover from "@/hooks/useHover";
+import useWindowSize from "@/hooks/useViewport";
 
 const langData = [
   {
@@ -38,8 +39,10 @@ const LanguageChoose = ({modelStyle=false}) => {
 
   const [langChoose, setLangChoose] = useState(langData);
   const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
-  const [tabHover,setTabHover] = useState(3)
+  const [tabHover,setTabHover] = useState(3);
+  const size = useWindowSize();
   const handleClick = useCallback((id) => {
+
     const newLang = langChoose.map((item) => {
       if (item.id === id) {
         return { ...item, isActive: true };
@@ -48,7 +51,7 @@ const LanguageChoose = ({modelStyle=false}) => {
       }
     });
     setLangChoose(newLang);
-    handleMouseLeave();
+    // handleMouseLeave();
   }, []);
 
   return (
@@ -65,7 +68,10 @@ const LanguageChoose = ({modelStyle=false}) => {
               return (
                 <p
                   className={styles.langItemOther}
-                  onClick={() => handleClick(lang.id)}
+                  onClick={() => {
+                    handleClick(lang.id)
+                    // setTabHover(3);
+                  }}
                   key={lang.id}
                   onMouseEnter={() => setTabHover(idx)}
                   style={idx === tabHover ? colorStyle : null}
@@ -88,7 +94,10 @@ const LanguageChoose = ({modelStyle=false}) => {
                 }}
                 onMouseLeave={() => setTabHover(3)}
                 style={2 === tabHover ? colorStyle : null}
-                onClick={() => handleClick(lang.id)}
+                onClick={() => {
+                  handleClick(lang.id)
+                  handleMouseEnter()
+                }}
                 key={lang.id}
               >
                 {lang.name}

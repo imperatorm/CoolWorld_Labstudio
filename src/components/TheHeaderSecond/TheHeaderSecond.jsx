@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const TheHeaderSecond = ({children}) => {
   return (
-    <div className={` ${styles.headerWrapper}`}>
+    <div className={` ${styles.headerWrapper} second-header`}>
       <header className={`${styles.header}`}>
         <div className={styles.imgWrap}>
           <Link href={"/"}>

@@ -7,11 +7,14 @@ const InfoSection = ({info}) => {
     <div className="main-container">
       <div className={styles.infoWrap}>
         <div className={styles.litInfo}>{litInfo}</div>
-        <div className={styles.bigInfo}>{bigInfo}</div>
+        <div className={styles.bigInfo}>
+          {bigInfo}
+
+        <Link href={url} className={styles.infoBtn}>
+          {btnText}
+        </Link>
+        </div>
       </div>
-      <Link href={url} className={styles.infoBtn}>
-        {btnText}
-      </Link>
     </div>
   );
 };

@@ -6,7 +6,7 @@ let lenis;
 const initSmoothScrolling = () => {
 	// Smooth scrolling initialization (using Lenis https://github.com/studio-freight/lenis)
 	lenis = new Lenis({
-		lerp: 1,
+		lerp: 0.1,
 		smoothWheel: false,
 		orientation: 'vertical',
 	});
