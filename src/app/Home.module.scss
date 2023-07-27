@@ -1,15 +1,13 @@
 .infoText {
   color: var(--color-milk);
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 45px;
-  text-align: center;
   padding: 0 72px;
   max-width: 1297px;
   margin: 73px auto;
-  & :last-child {
-    margin-top: 15px;
-  }
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 45px;
+  text-align: center;
   
 }
 .videoWrap {

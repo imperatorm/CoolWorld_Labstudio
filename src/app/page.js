@@ -20,9 +20,8 @@ export default function Home() {
           <p>
             Genieße eine angenehme Abkühlung im Freien mit unserer innovativen
             Sprühnebelkühlung. Schaffe eine erfrischende Umgebung, um die Natur
-            und deinen Lifestyle auch an den
+            und deinen Lifestyle auch an den heißesten Tagen zu genießen.
           </p>
-          <p>heißesten Tagen zu genießen.</p>
         </div>
         <VideoScroll />
 

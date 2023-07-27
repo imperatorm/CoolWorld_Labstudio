@@ -12,7 +12,6 @@ const KeepCoolInfo = () => {
         Kühlungsbereiche für Gastro, Privat und Tierwelt: Genieße den Sommer in
         angenehmer Kühle. Unsere hochwertigen Sprühkühlsysteme schaffen eine
         angenehme Umgebung für
-        Zügen!
       </p>
     </div>
   );

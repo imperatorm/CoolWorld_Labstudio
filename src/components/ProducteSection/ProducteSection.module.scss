@@ -69,11 +69,12 @@
   top: 0;
   border-radius: 50%;
   background-color: rgb(78 191 236 / 64%);
-  border: 3px solid var(--color-blue);
+  height: 100%;
   max-width: 414px;
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  height: 100%;
 
   // animation: rotating 12s linear infinite;
   & text {

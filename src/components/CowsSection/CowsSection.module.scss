@@ -1,4 +1,3 @@
-
 .textFill {
   height: 100vh;
   position: relative;
@@ -15,34 +14,41 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-repeat: repeat-x;
-    background-image: linear-gradient(180deg, var(--color-milk),var(--color-milk));
+    background-image: linear-gradient(180deg, var(--color-milk), var(--color-milk));
     background-size: 100%;
-    
+    letter-spacing: 5px;
+
     background-position-y: 300px;
     // transition: background-position-y 3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
   }
+
   // &:hover h3{
   //   background-position-y: 100%;
   // }
 }
+
 .imgWrap1 {
-    transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%);
 }
+
 .imgWrap2 {
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
 .imgWrap3 {
-    transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%);
 }
+
 .imgWrap {
   position: absolute;
   max-width: 414px;
   width: 100%;
   border-radius: 50%;
-  border:1px var(--color-blue) solid;
+  border: 1px var(--color-blue) solid;
   cursor: pointer;
   top: 50%;
   left: 50%;
+
   // transform: translate(-50%, -50%);
   & img {
     display: block;
@@ -52,38 +58,43 @@
     min-height: 413px;
 
   }
+
   &:hover svg {
     opacity: 1;
   }
 }
+
 .svgCover {
   position: absolute;
   top: 0;
   border-radius: 50%;
   background-color: rgb(78 191 236 / 64%);
-  border: 3px solid var(--color-blue);
+  height: 100%;
   max-width: 414px;
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+
   // animation: rotating 12s linear infinite;
   & text {
-    fill:white;
+    fill: white;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 31.1px;
   }
-     @keyframes rotating {
-       from {
-         transform: rotate(0deg);
-       }
-  
-       to {
-         transform: rotate(360deg);
-       }
-     }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
+
 .btnCows {
   display: table;
   border: 3px solid #F3F1DD;
@@ -97,11 +108,13 @@
   margin: 0 auto;
   margin-top: 250px;
   transition: var(--transition);
+
   &:hover {
-  background-color: #F3F1DD;
-  color: var(--color-blue);
+    background-color: #F3F1DD;
+    color: var(--color-blue);
   }
 }
+
 .cownsWrap {
   position: absolute;
   width: 100%;

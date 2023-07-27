@@ -2,7 +2,7 @@
 import React, { useEffect,useLayoutEffect, useRef } from "react";
 import styles from "./CowsSection.module.scss";
 import cowsImg from "@/assets/images/cows.png"
-import shapeImg from "@/assets/images/shape3.png"
+import shapeImg from "@/assets/images/shape1.png"
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -41,7 +41,7 @@ const CowsSection = () => {
         .to(
           contents[0],
           {
-            keyframes: { x: [500, 185, -357] },
+            keyframes: { x: [500, 185, -260] },
             duration: 5,
             autoAlpha: 1,
             ease: Power0.easeNone,
@@ -76,7 +76,7 @@ const CowsSection = () => {
           .to(
             contents[1],
             {
-              keyframes: { x: [500, 185, 43] },
+              keyframes: { x: [500, 185, 5] },
               duration: 5,
               ease: Power0.easeNone,
               autoAlpha: 1,
@@ -87,7 +87,7 @@ tl.add("anim_start3", "+=0")
   .to(
     contents[2],
     {
-      keyframes: { x: [500, 185, 10] },
+      keyframes: { x: [500, 185, -143] },
       duration: 5,
       ease: Power0.easeNone,
       autoAlpha: 1,
@@ -97,7 +97,7 @@ tl.add("anim_start3", "+=0")
   .to(
     ".textWaves",
     {
-      backgroundPositionY: "100%",
+      backgroundPositionY: "120%",
       // backgroundPositionX: "1000px",
       duration: 5,
       ease: Power0.easeNone,

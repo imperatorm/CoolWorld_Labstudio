@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./TheFooter.module.scss";
 import Image from "next/image";
-import footerImg from "@/assets/images/footer-bg.png"
+import footerImg from "@/assets/images/footer-bg.png";
 import Link from "next/link";
 const TheFooter = () => {
   return (
     <footer className={styles.footerWrap}>
       <div className={styles.imgWrap}>
-        <Image src={footerImg} alt={"footer-bg"} />
+        <Image src={footerImg} width={1920} height={936} alt={"footer-bg"} />
       </div>
       <div className={styles.footerContent}>
         <div className={styles.footerContent}>
@@ -59,10 +59,10 @@ const TheFooter = () => {
                 <p>
                   <span>
                     <Link href={"tel:+43 676 560 62 22"}>
-                      +43 676 560 62 22
+                      +43 676 560 62 22,
                     </Link>
                   </span>
-                  <span>|</span>
+
                   <span>
                     <Link href={"mailto:info@thecoolworld.at"}>
                       info@thecoolworld.at

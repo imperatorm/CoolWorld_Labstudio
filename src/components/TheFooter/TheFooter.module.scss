@@ -1,6 +1,7 @@
 .footerWrap {
   margin-top: 100px;
 }
+
 .footerContent {
   background-repeat: no-repeat;
   width: 100%;
@@ -17,16 +18,16 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
- 
+
 }
 
 .navFooter {
   max-width: 936px;
   width: 100%;
   margin: 0 auto;
-  padding:0 15px;
-  
-  
+  padding: 0 15px;
+
+
   @media only screen and (max-width: 900px) {
     max-width: 100%;
   }
@@ -36,25 +37,28 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
     @media only screen and (max-width: 900px) {
-        gap:10px;
-       
-      }
+      gap: 10px;
+
+    }
 
     & li {
       font-size: 35px;
-      line-height: 42px;
+      line-height: 29px;
+      font-weight: bold;
+
       @media only screen and (max-width: 900px) {
-          font-size: 25px;
-          line-height: 20px;
-        }
+        font-size: 25px;
+        line-height: 20px;
+      }
     }
 
     & li:not(:last-child) {
       border-right: 4px solid var(--color-blue);
 
       padding-right: 15px;
-      margin-right: 15px;
+      margin-right: 20px;
     }
   }
 }
@@ -77,7 +81,9 @@
     border-radius: 50%;
     background-color: var(--color-blue);
     color: var(--color-milk);
-    font-size: 22px;
+    font-size: 22.46px;
+    font-weight: bold;
+    letter-spacing: 0;
     line-height: 27px;
     text-align: center;
     cursor: pointer;
@@ -96,10 +102,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   @media only screen and (max-width: 900px) {
-      font-size: 18px;
-      line-height: 20px;
-    }
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .socialNav {
@@ -111,14 +118,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-weight: bold;
 
 
     & li:not(:last-child) {
-      border-right: 2px solid var(--color-blue);
-
+      border-right: 3px solid var(--color-blue);
       padding-right: 15px;
       margin-right: 15px;
+      line-height: 18px;
     }
   }
 }
@@ -143,6 +150,6 @@
   display: block;
   object-fit: cover;
   max-width: 100%;
-  max-height: 931px;
-  height: 100%;
+  // max-height: 931px;
+  height: auto;
 }

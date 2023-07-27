@@ -15,6 +15,7 @@
 .video {
   width: 100vw;
 }
+
 .videoBannerText {
   font-weight: 900;
   font-size: 90px;
@@ -26,6 +27,7 @@
   left: 50%;
   // opacity: 0;
 }
+
 .paraContent {
   position: absolute;
   bottom: -100%;
@@ -34,14 +36,22 @@
   text-align: center;
   color: var(--color-blue);
   font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 0;
   line-height: 79px;
+  text-align: center;
   background-color: var(--color-milk);
   margin-top: -15px;
   min-height: 100%;
   min-width: 100%;
   opacity: 1;
-  & h2{
+  max-width: 1200px;
+
+  & h2 {
     padding: 100px 135px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1410px;
   }
 }
 
@@ -55,16 +65,20 @@
   // transform: translate(0px, 0) !important;
   // background-color: cadetblue;
 }
+
 .splitLines {
   display: flex;
   gap: 40px;
 }
+
 .splitWords {
   display: flex;
 }
+
 .split {
   font-size: 90px;
-  font-weight: 400;
+  font-weight: bold;
+  letter-spacing: 0;
   line-height: 90px;
   text-align: center;
   color: var(--color-milk);

@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade, Autoplay } from "swiper/modules";
 import homeImg from "@/assets/images/Home01-min.png";
-import girlImg from "@/assets/images/girl-min.png";
+import girlImg from "@/assets/images/girl-min1.png";
 
 
 import styles from "./HeroSection.module.scss";
