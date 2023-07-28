@@ -1,5 +1,7 @@
+.wrapper {}
+
 .content {
-  min-height: 816px;
+  min-height: 1023px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,8 +13,7 @@
 }
 
 .keepInfo {
-  padding-left: 100px;
-  margin-left: 50px;
+
   display: flex;
 }
 
@@ -40,7 +41,7 @@
 .keepInfo {
   position: absolute;
   top: 0;
-  left: 5%;
+  left: 0%;
 }
 
 .keepBanner {
@@ -65,7 +66,7 @@
 }
 
 .infoWrap {
-  padding-top: 60px;
+  padding-top: 128px;
   padding-bottom: 110px;
 
   & h3 {
@@ -83,12 +84,15 @@
     font-size: 33px;
     letter-spacing: 0;
     line-height: 43px;
-    margin-top: 40px;
+    margin-top: 44px;
+    max-width: 1358px;
+    width: 100%;
+
   }
 }
 
 .unsereWrap {
-  padding-top: 100px;
+  padding-top: 90px;
 
   &>h4 {
     color: var(--color-blue);
@@ -248,8 +252,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 100px 0;
-  padding-right: 194px;
+  margin-top: 158px;
+  margin-bottom: 136px;
+  padding-right: 136px;
 }
 
 .truckInfo {
@@ -291,6 +296,20 @@
   bottom: 0;
   top: 90%;
   z-index: 999;
+
+  @media screen and (max-height: 800px) {
+    top: 88%;
+  }
+
+  @media screen and (max-height: 768px) {
+    top: 85%;
+  }
+
+  @media screen and (max-height: 768px) {
+    top: 83%;
+  }
+
+
 
   & a {
     color: var(--color-blue);

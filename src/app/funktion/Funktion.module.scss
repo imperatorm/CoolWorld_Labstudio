@@ -1,4 +1,5 @@
 .funktionWrap {
+ 
   &>h2 {
     text-align: center;
     color: var(--color-milk);
@@ -13,7 +14,7 @@
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 235px;
     margin-bottom: 100px;
   }
 }
@@ -34,7 +35,7 @@
 }
 
 .infoWrap {
-  padding-top: 60px;
+  padding-top: 146px;
 
   & h3 {
     color: var(--color-blue);
@@ -51,14 +52,14 @@
     font-size: 33px;
     letter-spacing: 0;
     line-height: 43px;
-    margin-top: 40px;
+    margin-top: 70px;
     max-width: 1290px;
     width: 100%;
   }
 }
 
 .unsereWrap {
-  padding-top: 100px;
+  padding-top: 70px;
 
   &>h4 {
     color: var(--color-blue);
@@ -73,7 +74,7 @@
 .lists {
   display: flex;
   flex-direction: column;
-  gap: 39px;
+  gap: 40px;
   padding-top: 62px;
 }
 
@@ -90,7 +91,7 @@
   &>p {
     color: var(--color-blue);
     font-family: var(--font-replica);
-    font-size: 33px;
+    font-size: 30px;
     letter-spacing: 0;
     line-height: 43px;
 
@@ -98,7 +99,7 @@
 }
 
 .btnWrap {
-  padding-top: 100px;
+  padding-top: 136px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -152,7 +153,7 @@ overflow: hidden;
     }
 }
 .einWrap {
-  padding-top: 100px;
+  padding-top: 20px;
   &>h4 {
     max-width: 379px;
     width: 100%;
@@ -171,7 +172,7 @@ overflow: hidden;
   top: 0;
   left: 0;
   border-radius: 50%;
-  background-color: rgb(78 191 236 / 64%);
+  background-color: rgb(78 191 236 / 81%);
   border: 3px solid var(--color-blue);
   max-width: 414px;
   width: 100%;

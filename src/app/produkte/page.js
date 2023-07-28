@@ -1,7 +1,7 @@
-import ProducteSection from '@/components/ProducteSection/ProducteSection'
-import TheFooter from '@/components/TheFooter/TheFooter';
-import styles from "./Produkte.module.scss"
-import React from 'react'
+import ProducteSection from "@/components/ProducteSection/ProducteSection";
+import TheFooter from "@/components/TheFooter/TheFooter";
+import styles from "./Produkte.module.scss";
+import React from "react";
 
 const Produkte = () => {
   return (
@@ -27,6 +27,6 @@ const Produkte = () => {
       <TheFooter />
     </div>
   );
-}
+};
 
-export default Produkte
+export default Produkte;

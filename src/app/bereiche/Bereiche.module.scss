@@ -1,3 +1,6 @@
+.cowsWrapper {
+  margin-top: 224px;
+}
 .funktionWrap {
   &>h2 {
     text-align: center;
@@ -23,12 +26,10 @@
   overflow-x: hidden;
 }
 
-.milkWrap {
-
-}
 
 .infoWrap {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   & h3 {
     color: var(--color-milk);
@@ -45,7 +46,7 @@
     font-size: 33px;
     letter-spacing: 0;
     line-height: 43px;
-    margin-top: 40px;
+    margin-top: 70px;
   }
 }
 

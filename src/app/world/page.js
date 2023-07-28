@@ -15,7 +15,6 @@ const World = () => {
   const truckRef = useRef(null)
   return (
     <div className={styles.wrapper}>
-  
       <div className={`${styles.scrollInfo}`}>
         <Link href="/world" className="active">
           KeepColl.World
@@ -33,7 +32,7 @@ const World = () => {
           >
             <div className={styles.info}>
               <div className={styles.keepInfo}>
-                <TitleAnimation>
+                <TitleAnimation containerName={"bereicheKeep"}>
                   <span className={styles.firstTitle}>Keep</span>
                   <span className={styles.secondTitle}>Cool.</span>
                   <span className={styles.descTitle}>Enjoy the Summer.</span>
@@ -264,7 +263,7 @@ const World = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.wordBus}>
         <div className={styles.truck}>
           <div ref={truckRef} className={styles.truckInfo}>
             <h3>Keep</h3>
@@ -278,7 +277,7 @@ const World = () => {
         </div>
         <InfoSection info={infoWorld} />
       </div>
-
+  
       <TheFooter />
     </div>
   );

@@ -19,7 +19,7 @@ const KeepBereiche = () => {
     <div>
       <div
         className={`main-container ${styles.wrapper}`}
-        
+
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>
@@ -29,7 +29,7 @@ const KeepBereiche = () => {
           >
             <div className={styles.info}>
               <div className={styles.keepInfo}>
-                <TitleAnimation>
+                <TitleAnimation containerName={"bereicheKeep"}>
                   <span className={styles.firstTitle}>Keep</span>
                   <span className={styles.secondTitle}>Cool.</span>
                   <span className={styles.descTitle}>No more nasty Flys.</span>
@@ -302,7 +302,11 @@ const KeepBereiche = () => {
           </div>
         </div>
       </div>
+      <h2 class={styles.weitere}>Weitere</h2>
+      <div>
       <CowsSection />
+
+      </div>
       <TheFooter />
     </div>
   );

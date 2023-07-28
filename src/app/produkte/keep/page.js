@@ -326,7 +326,10 @@ const Keep = () => {
           </div>
         </div>
       </div>
-      <ProducteSection />
+      <h2 class={styles.weitere}>Weitere</h2>
+      <div>
+        <ProducteSection />
+      </div>
       <TheFooter />
     </div>
   );

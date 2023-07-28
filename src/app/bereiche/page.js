@@ -8,7 +8,10 @@ const Bereiche = () => {
   return (
     <div>
       <TheHeader />
+      <div className={styles.cowsWrapper}>
+
       <CowsSection />
+      </div>
       <div className={styles.milkWrap}>
         <div className={`main-container ${styles.infoWrap}`}>
           <h3>KeepCool: </h3>

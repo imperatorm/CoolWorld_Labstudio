@@ -32,7 +32,7 @@ const World = () => {
           >
             <div className={styles.info}>
               <div className={styles.keepInfo}>
-                <TitleAnimation>
+                <TitleAnimation containerName={"bereicheKeep"}>
                   <span className={styles.firstTitle}>Keep</span>
                   <span className={styles.secondTitle}>Cool.</span>
                   <span className={styles.descTitle}>Enjoy the Summer.</span>

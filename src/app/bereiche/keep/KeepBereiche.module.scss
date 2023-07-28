@@ -2,7 +2,7 @@
   margin-top: 70px;
 }
 .content {
-  min-height: 816px;
+    min-height: 1023px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,8 +63,8 @@
 
 .keepInfo {
   position: absolute;
-  top: 0;
-  left: 5%;
+  top: 20%;
+  left: -11%;
 }
 
 .keepBanner {
@@ -89,7 +89,7 @@
 }
 
 .infoWrap {
-  padding-top: 60px;
+  padding-top: 116px;
 
   & h3 {
     color: var(--color-milk);
@@ -106,14 +106,15 @@
     font-size: 33px;
     letter-spacing: 0;
     line-height: 43px;
-    margin-top: 40px;
+    margin-top: 70px;
   }
 }
 .unsereWrap {
-  padding-top: 100px;
+  padding-top: 136px;
+  margin-bottom: 117px;
 
   &>h4 {
-    color: var(--color-blue);
+    color: var(--color-milk);
     font-family: var(--font-replica);
     font-size: 54px;
     font-weight: bold;
@@ -141,15 +142,16 @@
   &>p {
     color: var(--color-milk);
     font-family: var(--font-replica);
-    font-size: 33px;
+    font-size: 30px;
     letter-spacing: 0;
     line-height: 43px;
+    font-weight: 400;
 
   }
 }
 
 .einWrap {
-  padding-top: 100px;
+  padding-top: 30px;
 
   &>h4 {
     max-width: 379px;
@@ -265,3 +267,11 @@
   }
 }
 
+.weitere {
+  font-size: 37.8px;
+  line-height: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 199px;
+
+}

@@ -1,5 +1,6 @@
 .wrapper {
-  margin-top: 200px;
+  margin-top: 242px;
+ 
   
 }
 
@@ -8,7 +9,7 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 268px;
 
   &>h2 {
     color: var(--color-milk);
@@ -40,7 +41,7 @@
   gap: 33px;
   overflow: hidden;
   justify-content: space-between;
-  padding-right: 68px;
+  padding-right: 69px;
 
 
   &>button {
@@ -64,7 +65,7 @@
 .keep {
   max-width: 950px;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 205px;
   &>h3 {
     color: var(--color-milk);
     font-family: var(--font-replica);
@@ -72,7 +73,7 @@
     font-weight: bold;
     letter-spacing: 0;
     line-height: 79px;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
   }
   &>p {
     color: var(--color-milk);
@@ -84,9 +85,10 @@
   }
 }
 .info {
+  margin-bottom: 148px;
   & > ul {
-    margin-top: 189px;
-    margin-bottom: 50px;
+      margin-top: 176px;
+    margin-bottom: 52px;
   }
   & > ul li {
     color: var(--color-milk);
@@ -109,7 +111,7 @@
       width: 100%;
       max-width: 333px;
       padding: 16px 0;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
   }
   
 }

@@ -4,6 +4,7 @@
 }
 
 .solarTop {
+   
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -11,7 +12,7 @@
 
 .solarTopInfo {
   &>h2 {
-    font-size: 85px;
+    font-size: 81px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 70px;
@@ -19,8 +20,11 @@
   }
 
   &>h2:nth-child(2) {
-    padding-left: 30px;
+    padding-left: 55px;
 
+  }
+  &>h2:nth-child(3) {
+    line-height: 43px;
   }
 
   &>p {
@@ -28,7 +32,7 @@
     font-weight: bold;
     letter-spacing: 0;
     line-height: 30px;
-    margin-top: 20px;
+    margin-top: 27px;
   }
 }
 
@@ -50,6 +54,7 @@
     width: 100%;
     font-size: 18px;
     padding: 15px 0;
+    line-height: 26px;
   }
 }
 
@@ -81,7 +86,7 @@
   font-size: 19px;
   letter-spacing: 0;
   line-height: 26px;
-  max-width: 448px;
+  max-width: 440px;
   width: 100%;
   padding-left: 50px;
   margin-top: 40px;
@@ -92,16 +97,17 @@
 }
 
 .solarTopSecond {
-  max-width: 1342px;
+  max-width: 1319px;
   margin: 0 auto;
   justify-content: stretch;
   gap: 70px;
   display: flex;
   align-items: flex-end;
+  margin-top: 192px;
 }
 
 .einWrap {
-  padding-top: 100px;
+  
 
   &>h4 {
     max-width: 379px;
@@ -121,8 +127,8 @@
   top: 0;
   left: 0;
   border-radius: 50%;
-  background-color: rgb(78 191 236 / 64%);
-  border: 3px solid var(--color-blue);
+  background-color: #f3f1dde8;
+  border: 1px solid var(--color-blue);
   max-width: 414px;
   width: 100%;
   opacity: 0;
@@ -131,7 +137,7 @@
   animation: rotating 12s linear infinite;
 
   & text {
-    fill: white;
+    fill: var(--color-blue);
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 0;
@@ -229,7 +235,7 @@
 
 .solarMiddleInfo {
   position: absolute;
-  right: 15%;
+  right: 30%;
   top: 50%;
 }
 
@@ -241,8 +247,8 @@
 
 .solarBottomFirst {
   position: absolute;
-  left: 22%;
-  top: 7%;
+  left: 15%;
+  top: 2%;
 }
 
 .solarBottomSvg {
@@ -256,7 +262,7 @@
 .solarBottomLast {
   position: absolute;
   bottom: 0;
-  left: 11%;
+  left: 6%;
 }
 
 .btnWrap {
@@ -267,6 +273,9 @@
   display: flex;
   padding:16px 0;
   justify-content: center;
+  margin-left: 151px;
+  margin-top: 150px;
+  margin-bottom: 183px;
   & a {
     color: var(--color-blue);
     font-size: 18px;
@@ -274,4 +283,13 @@
     letter-spacing: 0;
     line-height: 25.92px;
   }
+}
+
+.weitere  {
+  font-size: 37.8px;
+  line-height: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 199px;
+
 }

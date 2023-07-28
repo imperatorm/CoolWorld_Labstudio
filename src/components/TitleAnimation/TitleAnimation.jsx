@@ -2,7 +2,7 @@
 import React, {useState} from 'react'
 import { useTrail, a } from "@react-spring/web";
 import styles from "./TitleAnimation.module.scss"
-const Trail = ({trail,items, nameClass }) => {
+const Trail = ({ trail, items, nameClass, }) => {
   return (
     <div>
       {trail.map(({ height, ...style }, index) => (
@@ -13,21 +13,21 @@ const Trail = ({trail,items, nameClass }) => {
     </div>
   );
 };
-const TitleAnimation = ({children}) => {
+const TitleAnimation = ({ children, containerName = "container" }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
     config: { mass: 100, tension: 8000, friction: 600 },
-    opacity: 1 ,
+    opacity: 1,
     x: 0,
     height: "auto",
     from: { opacity: 0, x: 80, height: 0 },
   });
   return (
-    <div className={styles.container}>
-      <Trail nameClass={"trailsText"} trail={trail} items={items}/>
+    <div className={styles[containerName]}>
+      <Trail nameClass={"trailsText"} trail={trail} items={items} />
     </div>
   );
-}
+};
 
 const TitleAnimationItem = ({children}) => {
    const items = React.Children.toArray(children);

@@ -72,7 +72,7 @@ const Datenschutz = () => {
           quodi sequi re nihit ut ad ut quias rector mossequi quisto te
           plitatur?
         </p>
-        <p>
+        <span>
           Ut prorese vollupic tem elenien dusant quaturit a consequam, opta
           parum ium, corum fugiatur alis pres quias elibeatem. Excerum ratur,
           optium explab ipsunti offic tesed quid que perchit ipsa deligen
@@ -80,9 +80,9 @@ const Datenschutz = () => {
           ius aliatin cilliqui odi net ut estio dis sumquamus dellupta et
           volupta turecum inversped estecta tionsequi raerum adicium et, quia
           plibus.
-        </p>
-        <p>Optas maximin temquamet, ium int.</p>
-        <p>Otam, suntur alit asit eliquiae sectisq uaerit earum</p>
+        </span>
+        <span>Optas maximin temquamet, ium int.</span>
+        <span>Otam, suntur alit asit eliquiae sectisq uaerit earum</span>
       </div>
       <TheFooter />
     </div>

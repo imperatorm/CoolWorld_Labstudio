@@ -341,7 +341,7 @@ const Funktion = () => {
               </nav>
               <div className={styles.otherInfo}>
                 <p>
-                  Instagram TheCoolWorld GmbH, Dorf 23e, 6210 Wiesing, Austria
+                  TheCoolWorld GmbH, Dorf 23e, 6210 Wiesing, Austria
                 </p>
                 <div className={styles.socialContact}>
                   <p>
