@@ -93,7 +93,9 @@ html {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
-
+body {
+  overflow-x: hidden;
+}
 ul li {
   list-style: none;
 }

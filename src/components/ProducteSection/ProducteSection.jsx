@@ -31,7 +31,7 @@ const ProducteSection = () => {
           scrub: true,
           pin: true,
           // pinSpacer:false,
-          start: "top 25%",
+          start: "top 10%",
           end: "bottom",
           toggleActions: "restart reverse none none",
           // markers: true,

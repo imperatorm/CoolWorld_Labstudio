@@ -6,7 +6,7 @@ import girlImg from "@/assets/images/girl-min.png";
 import Link from 'next/link';
 const KeepCool = () => {
   return (
-    <div className={` main-container`}>
+    <div className={styles.wrapper}>
       <KeepCoolInfo />
       <div className={styles.keepWrap}>
         <div className={`${styles.keepContent} content`}>

@@ -14,8 +14,8 @@ const TheHeaderSecond = ({children}) => {
             <Image
               src="/logo-blue.png"
               alt="Logo"
-              width={180}
-              height={37}
+              width={314}
+              height={58}
               priority
             />
           </Link>

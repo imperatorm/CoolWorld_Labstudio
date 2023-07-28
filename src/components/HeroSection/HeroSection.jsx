@@ -42,15 +42,16 @@ const HeroSection = () => {
     }
   }, [activeSection]);
   return (
-    <div ref={initialRef}>
+    <div className={styles.wrapper} ref={initialRef}>
       <Swiper
         spaceBetween={30}
         effect={"fade"}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay, EffectFade]}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
+        modules={[EffectFade]}
+        // modules={[Autoplay, EffectFade]}
         className="mySwiper"
         onSlideChange={(e) => {
           setActiveSection(e.activeIndex);

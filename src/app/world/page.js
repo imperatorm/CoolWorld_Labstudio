@@ -14,7 +14,8 @@ import Link from 'next/link';
 const World = () => {
   const truckRef = useRef(null)
   return (
-    <div>
+    <div className={styles.wrapper}>
+  
       <div className={`${styles.scrollInfo}`}>
         <Link href="/world" className="active">
           KeepColl.World
