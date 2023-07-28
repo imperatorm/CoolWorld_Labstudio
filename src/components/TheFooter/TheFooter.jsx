@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./TheFooter.module.scss";
 import Image from "next/image";
-import footerImg from "@/assets/images/footer-bg.png";
+import footerImg from "@/assets/images/footer-bg.svg";
 import Link from "next/link";
 const TheFooter = () => {
   return (
