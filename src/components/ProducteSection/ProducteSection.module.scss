@@ -43,7 +43,7 @@
   max-width: 414px;
   width: 100%;
   border-radius: 50%;
-  border: 1px var(--color-blue) solid;
+  border: 5.4px var(--color-blue) solid;
   cursor: pointer;
   top: 50%;
   left: 50%;
@@ -67,7 +67,7 @@
 .svgCover {
   position: absolute;
   top: 0;
-  border-radius: 8px;
+  border-radius: 50%;
   background-color: rgb(78 191 236 / 64%);
   height: 100%;
   max-width: 414px;
