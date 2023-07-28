@@ -7,7 +7,7 @@ const TheFooter = () => {
   return (
     <footer className={styles.footerWrap}>
       <div className={styles.imgWrap}>
-        <Image src={footerImg} width={1920} height={936} alt={"footer-bg"} />
+        <Image src={footerImg} width={100vw} height={936} alt={"footer-bg"} />
       </div>
       <div className={styles.footerContent}>
         <div className={styles.footerContent}>
