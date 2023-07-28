@@ -21,7 +21,7 @@ const Navigation = ({ modelStyle }) => {
       >
         <LanguageChoose modelStyle={modelStyle} />
         <p
-          className={`${modelStyle ? styles.modeBlue: null} hbtn hb-fill-left`}
+          className={`${modelStyle ? styles.modeBlue: styles.modeMilk} hbtn hb-fill-left`}
           onClick={() => setActive((prev) => !prev)}
         >
           M
