@@ -1,9 +1,9 @@
 .footerWrap {
   margin-top: 140px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
 }
 
 .footerContent {
