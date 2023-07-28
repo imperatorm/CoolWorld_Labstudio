@@ -11,7 +11,7 @@ import { preloadImages } from "../../../public/js/utils";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade, Autoplay } from "swiper/modules";
-import homeImg from "@/assets/images/Home01-min.png";
+import homeImg from "@/assets/images/home5.png";
 import girlImg from "@/assets/images/girl-min1.png";
 
 
@@ -43,7 +43,31 @@ const HeroSection = () => {
   }, [activeSection]);
   return (
     <div className={styles.wrapper} ref={initialRef}>
-      <Swiper
+      <section
+        className={`${styles.heroWrap} ${
+          activeSection === 0 || activeSection === null
+            ? "content heroContent"
+            : ""
+        }`}
+      >
+        <div
+          className={`heroCanvas ${styles.heroBanner} ${
+            activeSection === 0 || activeSection === null ? "canvas-wrap" : ""
+          }`}
+          style={{ backgroundImage: `url(${homeImg.src})` }}
+        >
+          <div className={styles.linkWrap}>
+            <SubscribeBtn />
+          </div>
+        </div>
+
+        <TitleAnimation>
+          <span className={styles.firstTitle}>Keep</span>
+          <span className={styles.secondTitle}>Cool.</span>
+          <span className={styles.descTitle}>Enjoy the Summer.</span>
+        </TitleAnimation>
+      </section>
+      {/* <Swiper
         spaceBetween={30}
         effect={"fade"}
         // autoplay={{
@@ -113,7 +137,7 @@ const HeroSection = () => {
             </TitleAnimation>
           </section>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };

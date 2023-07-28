@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from "./KeepCool.module.scss"
+import React from "react";
+import styles from "./KeepCool.module.scss";
 
 const KeepCoolInfo = () => {
   return (
@@ -15,6 +15,6 @@ const KeepCoolInfo = () => {
       </p>
     </div>
   );
-}
+};
 
-export default KeepCoolInfo
+export default KeepCoolInfo;

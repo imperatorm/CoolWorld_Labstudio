@@ -2,14 +2,14 @@
   margin-left: 70px;
 }
 .heroWrap {
-  margin-top: 50px;
+  margin-top: 76px;
   height: 876px;
   position: relative;
 
 }
 .linkWrap {
   position: absolute;
-  bottom: 20%;
+  bottom: 6%;
   right: 70px;
 }
 .secondTitle {
@@ -35,16 +35,16 @@
   right: 0;
   height: 100%;
   width: 100%;
-  background-position: 50% 50%;
+
   background-size: cover;
   opacity: 0;
   background-repeat: repeat;
   width: 100%;
   margin-right: auto;
-  border-radius: 400px 0 0 400px;
+  border-radius: 700px 0 0 700px;
 
   & canvas {
-    border-radius: 400px 0 0 400px;
+    border-radius: 700px 0 0 700px;
   }
 
 }
