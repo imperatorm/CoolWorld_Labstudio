@@ -38,7 +38,7 @@ const TheFooter = () => {
             <nav className={styles.socialNav}>
               <ul>
                 <li>
-                  <Link href={"/datenschutz"}>Impressum</Link>
+                  <Link href={"/impressum"}>Impressum</Link>
                 </li>
                 <li>
                   <Link href={"/datenschutz"}>Datenschutz</Link>
