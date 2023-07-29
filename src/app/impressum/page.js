@@ -1,5 +1,5 @@
 import TheFooter from '@/components/TheFooter/TheFooter';
-import styles from "./Datenschutz.module.scss"
+import styles from "./Impressum.module.scss"
 import React from 'react'
 import TheHeader from '@/components/TheHeader/TheHeader';
 
