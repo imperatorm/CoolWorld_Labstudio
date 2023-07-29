@@ -25,14 +25,14 @@ export default function Home() {
         </div>
         <VideoScroll />
 
-        <div style={{ height: "15vh" }}></div>
+        <div style={{ height: "300px" }}></div>
         <CowsSection />
         <InfoSection info={infoFirst} />
         <ParallaxImg />
-        <div style={{ height: "15vh" }}></div>
+        <div style={{ height: "300px" }}></div>
         <ProducteSection />
         <InfoSection info={infoSecond} />
-        <div style={{ height: "15vh" }}></div>
+        <div style={{ height: "250px" }}></div>
         <KeepCool />
       </div>
       <TheFooter />
