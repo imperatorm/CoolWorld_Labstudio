@@ -3,7 +3,7 @@ import styles from "./Datenschutz.module.scss"
 import React from 'react'
 import TheHeader from '@/components/TheHeader/TheHeader';
 
-const Datenschutz = () => {
+const Impressum = () => {
   return (
     <div>
       <TheHeader />
@@ -59,8 +59,6 @@ Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kom
 Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen.
 Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
         </span>
-        <span>Optas maximin temquamet, ium int.</span>
-        <span>Otam, suntur alit asit eliquiae sectisq uaerit earum</span>
       </div>
       <TheFooter />
     </div>
