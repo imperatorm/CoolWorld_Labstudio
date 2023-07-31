@@ -2,12 +2,12 @@
   margin-top: 70px;
 }
 .content {
-    min-height: 1023px;
+  min-height: 1023px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 30px;
-  background-position-x: 300px;
+  background-position-x: 150px;
   display: flex;
   align-items: center;
   position: relative;
@@ -16,6 +16,7 @@
 .keepInfo {
   padding-left: 100px;
   margin-left: 50px;
+  margin-bottom: 100px;
   display: flex;
 }
 
