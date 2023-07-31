@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect,useLayoutEffect, useRef } from "react";
 import styles from "./ProducteSection.module.scss";
-import barImg from "@/assets/images/Product_blue.png"
+import barImg from "@/assets/images/bar_blue.png"
 import shapeImg from "@/assets/images/shape1.png";
 import Image from "next/image";
 import { gsap } from "gsap/dist/gsap";
