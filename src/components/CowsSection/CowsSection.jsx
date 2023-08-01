@@ -130,8 +130,8 @@ tl.add("anim_start3", "+=0")
               <g>
                 <text textAnchor="start">
                   <textPath xlinkHref="#textPath" startOffset="0%">
-                    gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
-                    zu gehe zu gehe zu
+                    gehe zu   gehe zu   gehe   zu   gehe zu   gehe zu   gehe zu   gehe zu   gehe
+                    zu   gehe zu   gehe zu
                   </textPath>
                 </text>
               </g>

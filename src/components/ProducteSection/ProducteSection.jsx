@@ -110,7 +110,7 @@ const ProducteSection = () => {
   }, [component]);
 
   return (
-    <div style={{ height: "100vh" }} ref={component}>
+    <div style={{ height: "100vh", margintop:"200px" }} ref={component}>
       <div className={styles.textFill} style={{ height: "100vh" }} ref={proRef}>
         <h3 className="textWavesProd">Produkte</h3>
         <div className={styles.cownsWrap} ref={proRef}>

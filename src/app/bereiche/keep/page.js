@@ -40,6 +40,10 @@ const KeepBereiche = () => {
                 </div>
                 <Link href="/kontakt">Gleich anfrage</Link>
               </div>
+<<<<<<< HEAD
+=======
+              <Link href="/kontakt">Gleich anfragen</Link>
+>>>>>>> fa5b283c20566b5177bfa76b3598533e3a9bebc4
             </div>
           </section>
         </TheHeaderSecond>

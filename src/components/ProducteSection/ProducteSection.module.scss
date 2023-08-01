@@ -43,7 +43,7 @@
   max-width: 414px;
   width: 100%;
   border-radius: 50%;
-  border: 1px var(--color-blue) solid;
+  border: 5.4px var(--color-blue) solid;
   cursor: pointer;
   top: 50%;
   left: 50%;
@@ -76,7 +76,7 @@
   transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
   height: 100%;
 
-  // animation: rotating 12s linear infinite;
+  animation: rotating 12s linear infinite;
   & text {
     fill: white;
     font-size: 11px;
@@ -107,7 +107,7 @@
   line-height: 38.88px;
   padding: 10px 60px;
   margin: 0 auto;
-  margin-top: 118px;
+  margin-top: 148px;
   transition: var(--transition);
   position: relative;
 
