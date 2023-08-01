@@ -4,7 +4,7 @@
 }
 
 .solarTop {
-   
+
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -23,6 +23,7 @@
     padding-left: 55px;
 
   }
+
   &>h2:nth-child(3) {
     line-height: 43px;
   }
@@ -48,13 +49,41 @@
   max-width: 225px;
 
   &>button {
-    color: #4EBFEC;
+    position: relative;
+    color: var(--color-milk);
     border-radius: 16.8px;
-    background-color: #F3F1DD;
+    // background-color: #F3F1DD;
+    border: 3px solid var(--color-milk);
     width: 100%;
     font-size: 18px;
     padding: 15px 0;
     line-height: 26px;
+    z-index: 0;
+
+    &:hover {
+      // background-color: #F3F1DD;
+      color: var(--color-blue);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: var(--color-milk);
+      transition-duration: 0.3s;
+      z-index: -1;
+      inset: 0px 0px auto auto;
+      width: 0px;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 1;
+    }
+
+
+    &:hover::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
   }
 }
 
@@ -107,7 +136,7 @@
 }
 
 .einWrap {
-  
+
 
   &>h4 {
     max-width: 379px;
@@ -268,24 +297,55 @@
 .btnWrap {
   max-width: 336px;
   width: 100%;
-  border-radius: 16.8px;
-  background-color: var(--color-milk);
+
   display: flex;
-  padding:16px 0;
+
   justify-content: center;
   margin-left: 151px;
   margin-top: 150px;
   margin-bottom: 183px;
+
   & a {
-    color: var(--color-blue);
+    text-align: center;
+    position: relative;
+    color: var(--color-milk);
+    border-radius: 16.8px;
+    // background-color: #F3F1DD;
+    border: 3px solid var(--color-milk);
+    width: 100%;
     font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 25.92px;
+    padding: 15px 0;
+    line-height: 26px;
+    z-index: 0;
+
+    &:hover {
+      // background-color: #F3F1DD;
+      color: var(--color-blue);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: var(--color-milk);
+      transition-duration: 0.3s;
+      z-index: -1;
+      inset: 0px 0px auto auto;
+      width: 0px;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 1;
+    }
+
+
+    &:hover::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
   }
 }
 
-.weitere  {
+.weitere {
   font-size: 37.8px;
   line-height: 42px;
   font-weight: bold;

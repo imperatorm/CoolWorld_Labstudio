@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import SplitText from "gsap-trial/SplitText";
 import maskImg from "./world.svg";
+import cursorPlay from "@/assets/images/cursorPlay.png";
 gsap.registerPlugin(ScrollTrigger);
 gsap.config({ trialWarn: false });
 import styles from "./VideoScroll.module.scss";
@@ -17,7 +18,7 @@ const VideoScroll = () => {
     const maskEl = maskRef.current;
     if (maskEl) {
       const charts = [...document.querySelectorAll(".split-chars")];
-      gsap.set(maskEl, { maskImage: `url(${maskImg.src})` });
+      gsap.set(maskEl, { maskImage: `url(${maskImg.src})`});
       gsap.set(elementRef.current, { y: 0, x: 0 });
       gsap
         .timeline({
@@ -96,7 +97,13 @@ const VideoScroll = () => {
           style={{ maskImage: `url(${maskImg.src})` }}
         >
           {/* <Image src={worldImg} /> */}
-          <video className={styles.video} autoPlay muted loop>
+          <video
+            className={styles.video}
+            autoPlay
+            muted
+            loop
+            style={{ cursor: `url(${cursorPlay.src}), auto` }}
+          >
             <source src={"./111.mp4"} type="video/mp4" />
           </video>
           <h3

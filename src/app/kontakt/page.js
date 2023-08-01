@@ -41,7 +41,7 @@ const Kontakt = () => {
         </div>
         <div className={`${styles.schrebin}`}>
           <LongArrow
-            style={{ transform: `translateX(${Math.abs(scrollX / 10)}px)` }}
+            style={{ transform: `translateX(${Math.abs(scrollX / 500)}px)` }}
           />
           <SubscribeBtn />
           {/* <button>Schreiben Sie uns eine E-Mail.</button> */}

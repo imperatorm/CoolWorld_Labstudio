@@ -96,6 +96,7 @@
 }
 
 .btnCows {
+  position: relative;
   display: table;
   border: 3px solid #F3F1DD;
   border-radius: 16.8px;
@@ -109,9 +110,29 @@
   margin-top: 118px;
   transition: var(--transition);
 
+
   &:hover {
-    background-color: #F3F1DD;
+    // background-color: #F3F1DD;
     color: var(--color-blue);
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background: var(--color-milk);
+    transition-duration: 0.3s;
+    z-index: -1;
+    inset: 0px 0px auto auto;
+    width: 0px;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
   }
 }
 

@@ -26,20 +26,22 @@ const World = () => {
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>
-          <div
-            className={styles.content}
-            style={{ backgroundImage: `url(${girlMin.src})` }}
-          >
-            <div className={styles.info}>
-              <div className={styles.keepInfo}>
-                <TitleAnimation containerName={"bereicheKeep"}>
-                  <span className={styles.firstTitle}>Keep</span>
-                  <span className={styles.secondTitle}>Cool.</span>
-                  <span className={styles.descTitle}>Enjoy the Summer.</span>
-                </TitleAnimation>
+          <section>
+            <div
+              className={`${styles.content}`}
+              style={{ backgroundImage: `url(${girlMin.src})` }}
+            >
+              <div className={styles.info}>
+                <div className={styles.keepInfo}>
+                  <TitleAnimation containerName={"bereicheKeep"}>
+                    <span className={styles.firstTitle}>Keep</span>
+                    <span className={styles.secondTitle}>Cool.</span>
+                    <span className={styles.descTitle}>Enjoy the Summer.</span>
+                  </TitleAnimation>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </TheHeaderSecond>
         <div className={`${styles.infoWrap}`}>
           <h3>KeepCool: </h3>
@@ -277,7 +279,7 @@ const World = () => {
         </div>
         <InfoSection info={infoWorld} />
       </div>
-  
+
       <TheFooter />
     </div>
   );

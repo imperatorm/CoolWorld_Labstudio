@@ -23,21 +23,25 @@ const KeepBereiche = () => {
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>
-          <div
-            className={styles.content}
-            style={{ backgroundImage: `url(${cowBanner.src})` }}
-          >
-            <div className={styles.info}>
-              <div className={styles.keepInfo}>
-                <TitleAnimation containerName={"bereicheKeep"}>
-                  <span className={styles.firstTitle}>Keep</span>
-                  <span className={styles.secondTitle}>Cool.</span>
-                  <span className={styles.descTitle}>No more nasty Flys.</span>
-                </TitleAnimation>
+          <section >
+            <div
+              className={`${styles.content} `}
+              style={{ backgroundImage: `url(${cowBanner.src})` }}
+            >
+              <div className={styles.info}>
+                <div className={styles.keepInfo}>
+                  <TitleAnimation containerName={"bereicheKeep"}>
+                    <span className={styles.firstTitle}>Keep</span>
+                    <span className={styles.secondTitle}>Cool.</span>
+                    <span className={styles.descTitle}>
+                      No more nasty Flys.
+                    </span>
+                  </TitleAnimation>
+                </div>
+                <Link href="/kontakt">Gleich anfrage</Link>
               </div>
-              <Link href="/kontakt">Gleich anfrage</Link>
             </div>
-          </div>
+          </section>
         </TheHeaderSecond>
         <div className={`${styles.infoWrap}`}>
           <h3>KeepCool: </h3>
@@ -304,8 +308,7 @@ const KeepBereiche = () => {
       </div>
       <h2 class={styles.weitere}>Weitere</h2>
       <div>
-      <CowsSection />
-
+        <CowsSection />
       </div>
       <TheFooter />
     </div>

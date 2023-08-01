@@ -2,6 +2,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 29px;
 }
 
 .keepBanner {
@@ -31,17 +32,17 @@
 
 .keepInfo {
   position: absolute;
-  top: 0;
+  top: 130px;
   left: -12%;
 }
 
 .secondTitle {
-  font-size: 140px;
+  font-size: 116px;
   padding-left: 90px;
 }
 
 .descTitle {
-  font-size: 140px;
+  font-size: 116px;
   font-size: 27.21px;
   font-weight: bold;
   letter-spacing: 0;
@@ -49,7 +50,7 @@
 }
 
 .firstTitle {
-  font-size: 140px;
+  font-size: 116px;
 }
 
 .keepFooterInfo {
@@ -66,12 +67,12 @@
 }
 
 .btnWrap {
-
+  position: relative;
   display: table;
-  border: 1px solid #F3F1DD;
+  border: 3px solid #F3F1DD;
   border-radius: 16.8px;
-  background-color: #F3F1DD;
-  color: var(--color-blue);
+ 
+  color: var(--color-milk);
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0;
@@ -79,6 +80,33 @@
   padding: 10px 60px;
   margin: 0 auto;
   margin-top: 37px;
+  z-index: 0;
+  &:hover {
+      // background-color: #F3F1DD;
+      color: var(--color-blue);
+    }
+  
+    &::before {
+      position: absolute;
+      content: "";
+      background: var(--color-milk);
+      transition-duration: 0.3s;
+      z-index: -1;
+      inset: 0px 0px auto auto;
+      width: 0px;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 1;
+    }
+  
+  
+    &:hover::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+
+
 
 }
 
@@ -93,6 +121,7 @@
   margin-bottom: 67px;
   max-width: 1328px;
   width: 100%;
+  padding-left: 41px;
 
   & h3 {
 
