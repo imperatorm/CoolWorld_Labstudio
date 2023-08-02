@@ -27,10 +27,12 @@ export default function Home() {
 
         <div style={{ height: "300px" }}></div>
         <CowsSection />
+        <div style={{ height: "217px" }}></div>
         <InfoSection info={infoFirst} />
         <ParallaxImg />
-        <div style={{ height: "300px" }}></div>
-        <ProducteSection />
+
+        <ProducteSection  />
+        <div style={{ height: "220px" }}></div>
         <InfoSection info={infoSecond} />
         <div style={{ height: "250px" }}></div>
         <KeepCool />

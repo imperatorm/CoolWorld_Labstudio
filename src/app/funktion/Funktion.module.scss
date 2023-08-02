@@ -315,6 +315,10 @@ overflow: hidden;
     line-height: 27px;
     text-align: center;
     cursor: pointer;
+    transition: var(--transition);
+    &:hover {
+      background-color: #0082b5;
+    }
 
   }
 }

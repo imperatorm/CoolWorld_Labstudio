@@ -1691,8 +1691,8 @@ export const FunktionIcon = forwardRef(function FunktionIcon(props, ref) {
 
 export const LongArrow = forwardRef(function LongArrow(props, ref) {
   return (
-   <svg xmlns="http://www.w3.org/2000/svg" width={1441} height={11} viewBox="0 0 1441 11" fill="none" {...props}>
-  <path d="M1430.95 4H0.5V6H1430.95V10.5L1440.5 5L1430.95 0V4Z" fill="white" />
+    <svg xmlns="http://www.w3.org/2000/svg" width={2001} height={10} viewBox="0 0 2001 10" fill="none">
+  <path d="M1987.73 5.69048H1988.23V6.19048V9.28939L1999.58 5.21582L1988.23 0.734907V4.28571V4.78571H1987.73H0.5V5.69048H1987.73Z" fill="white" stroke="white" />
 </svg>
 
   );

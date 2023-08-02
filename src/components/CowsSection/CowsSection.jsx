@@ -11,20 +11,23 @@ import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const CowsSection = () => {
-  const cowsRef = useRef(null)
-  const cowsImgOneRef = useRef(null)
-  const cowsImgSecondRef = useRef(null)
-  const cowsImgThreeRef = useRef(null)
+const CowsSection = ({ bottom, subTitle="" }) => {
+  const cowsRef = useRef(null);
+  const cowsImgOneRef = useRef(null);
+  const cowsImgSecondRef = useRef(null);
+  const cowsImgThreeRef = useRef(null);
   const component = useRef();
 
   useLayoutEffect(() => {
     if (component.current) {
       // let ctx = gsap.context(() => {
       let contents = gsap.utils.toArray(".circle");
-      
+
       gsap.set(contents, { autoAlpha: 0, x: 500 });
-      gsap.set(".textWaves",{backgroundImage: `url(${shapeImg.src})`,    backgroundPositionY: "-200%"});
+      gsap.set(".textWaves", {
+        backgroundImage: `url(${shapeImg.src})`,
+        backgroundPositionY: "-300%",
+      });
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: component.current,
@@ -60,61 +63,62 @@ const CowsSection = () => {
           },
           "anim_start"
         );
-        tl.add("anim_start2", "+=0")
-          .to(
-            ".textWaves",
-            {
-              backgroundPositionY: "-5%",
-              // backgroundPositionX: "800px",
-              duration: 5,
-              ease: Power0.easeNone,
-              // timeScale: 0.1,
-              // autoAlpha: 1,
-            },
-            "anim_start2"
-          )
-          .to(
-            contents[1],
-            {
-              keyframes: { x: [500, 185, 5] },
-              duration: 5,
-              ease: Power0.easeNone,
-              autoAlpha: 1,
-            },
-            "anim_start2"
-          );
-tl.add("anim_start3", "+=0")
-  .to(
-    contents[2],
-    {
-      keyframes: { x: [500, 185, -143] },
-      duration: 5,
-      ease: Power0.easeNone,
-      autoAlpha: 1,
-    },
-    "anim_start3"
-  )
-  .to(
-    ".textWaves",
-    {
-      backgroundPositionY: "120%",
-      // backgroundPositionX: "1000px",
-      duration: 5,
-      ease: Power0.easeNone,
+      tl.add("anim_start2", "+=0")
+        .to(
+          ".textWaves",
+          {
+            backgroundPositionY: "-5%",
+            // backgroundPositionX: "800px",
+            duration: 10,
+            ease: Power0.easeNone,
+            // timeScale: 0.1,
+            // autoAlpha: 1,
+          },
+          "anim_start2"
+        )
+        .to(
+          contents[1],
+          {
+            keyframes: { x: [500, 185, 5] },
+            duration: 5,
+            ease: Power0.easeNone,
+            autoAlpha: 1,
+          },
+          "anim_start2"
+        );
+      tl.add("anim_start3", "+=0")
+        .to(
+          contents[2],
+          {
+            keyframes: { x: [500, 185, -143] },
+            duration: 5,
+            ease: Power0.easeNone,
+            autoAlpha: 1,
+          },
+          "anim_start3"
+        )
+        .to(
+          ".textWaves",
+          {
+            backgroundPositionY: "120%",
+            // backgroundPositionX: "1000px",
+            duration: 5,
+            ease: Power0.easeNone,
 
-      // autoAlpha: 1,
-    },
-    "anim_start3"
-  );
+            // autoAlpha: 1,
+          },
+          "anim_start3"
+        );
     }
   }, [component]);
   return (
-    <div style={{ height: "100vh" }} ref={component}>
-      <div className={styles.textFill} style={{ height: "100vh" }}>
+    <div ref={component}>
+      {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
+      <div className={styles.textFill} style={{ paddingBottom: `${bottom}px` }}>
         <h3 className="textWaves">Bereiche</h3>
         <div className={styles.cownsWrap} ref={cowsRef}>
           <Link
-            href="/bereiche/keep"
+            href="/bereiche-keep"
             className={`${styles.imgWrap1} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -130,15 +134,15 @@ tl.add("anim_start3", "+=0")
               <g>
                 <text textAnchor="start">
                   <textPath xlinkHref="#textPath" startOffset="0%">
-                    gehe zu   gehe zu   gehe   zu   gehe zu   gehe zu   gehe zu   gehe zu   gehe
-                    zu   gehe zu   gehe zu
+                    gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe zu gehe
+                    zu gehe zu gehe zu
                   </textPath>
                 </text>
               </g>
             </svg>
           </Link>
           <Link
-            href="/bereiche/keep"
+            href="/bereiche-keep"
             className={`${styles.imgWrap2} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -162,7 +166,7 @@ tl.add("anim_start3", "+=0")
             </svg>
           </Link>
           <Link
-            href="/bereiche/keep"
+            href="/bereiche-keep"
             className={`${styles.imgWrap3} ${styles.imgWrap} circle`}
             ref={cowsImgOneRef}
           >
@@ -186,7 +190,7 @@ tl.add("anim_start3", "+=0")
             </svg>
           </Link>
         </div>
-        <Link href={"/bereiche/keep"} className={styles.btnCows}>
+        <Link href={"/bereiche-keep"} className={styles.btnCows}>
           Tierwelt
         </Link>
       </div>

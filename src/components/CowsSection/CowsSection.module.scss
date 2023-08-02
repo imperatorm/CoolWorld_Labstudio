@@ -1,6 +1,7 @@
 .textFill {
-  height: 100vh;
+
   position: relative;
+
 
   & h3 {
     font-size: 300px;
@@ -44,7 +45,7 @@
   max-width: 414px;
   width: 100%;
   border-radius: 50%;
-  border: 5.4px var(--color-blue) solid;
+
   cursor: pointer;
   top: 50%;
   left: 50%;
@@ -56,6 +57,7 @@
     width: 100%;
     border-radius: 50%;
     min-height: 413px;
+    border: 5.4px var(--color-blue) solid;
 
   }
 
@@ -107,7 +109,7 @@
   line-height: 38.88px;
   padding: 10px 60px;
   margin: 0 auto;
-  margin-top: 118px;
+  margin-top: 168px;
   transition: var(--transition);
 
 
@@ -141,4 +143,12 @@
   width: 100%;
   height: 60vh;
   top: -10%;
+}
+.subTitle {
+  font-size: 37.8px;
+  line-height: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 122px;
+
 }

@@ -11,7 +11,7 @@ import { Power0 } from "gsap-trial";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const ProducteSection = () => {
+const ProducteSection = ({bottom,subTitle=""}) => {
   const proRef = useRef(null);
   const proImgOneRef = useRef(null);
     const component = useRef();
@@ -23,7 +23,7 @@ const ProducteSection = () => {
       gsap.set(contents, { autoAlpha: 0, x: 500 });
       gsap.set(".textWavesProd", {
         backgroundImage: `url(${shapeImg.src})`,
-        backgroundPositionY: "-200%",
+        backgroundPositionY: "-300%",
       });
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -110,8 +110,13 @@ const ProducteSection = () => {
   }, [component]);
 
   return (
-    <div style={{ height: "100vh", margintop:"200px" }} ref={component}>
-      <div className={styles.textFill} style={{ height: "100vh" }} ref={proRef}>
+    <div style={{ marginTop: "200px" }} ref={component}>
+      {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
+      <div
+        className={styles.textFill}
+        style={{ paddingBottom: `${bottom}px` }}
+        ref={proRef}
+      >
         <h3 className="textWavesProd">Produkte</h3>
         <div className={styles.cownsWrap} ref={proRef}>
           <Link

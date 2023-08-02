@@ -1,5 +1,5 @@
 "use client"
-import React  from 'react'
+import React, { useEffect, useRef }  from 'react'
 import styles from "./KeepBereiche.module.scss"
 import icon01 from "@/assets/images/icon01-milk.png";
 import icon02 from "@/assets/images/icon02-milk.png";
@@ -11,21 +11,34 @@ import TheFooter from '@/components/TheFooter/TheFooter';
 import CowsSection from '@/components/CowsSection/CowsSection';
 import homeParallax from "@/assets/images/home4.png";
 import TheHeaderSecond from '@/components/TheHeaderSecond/TheHeaderSecond';
-import cowBanner from "@/assets/images/cow-banner.png";
+import cowBanner from "@/assets/images/cow-banner-1.png";
 import { TitleAnimation } from "@/components/TitleAnimation/TitleAnimation";
 import { Link } from 'react-scroll';
+import { Content } from "../../../public/js/content";
+import { preloadImages } from "../../../public/js/utils";
 const KeepBereiche = () => {
+  const initialRef = useRef()
+    useEffect(() => {
+      if(initialRef.current) {
+        const contentElems = [...document.querySelectorAll(".heroContent")];
+        contentElems.forEach((el) => new Content(el));
+         preloadImages(".canvas-wrap").then(() =>
+           document.body.classList.remove("loading")
+         );
+
+      }
+    }, []);
   return (
-    <div>
+    <div ref={initialRef}>
       <div
         className={`main-container ${styles.wrapper}`}
 
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>
-          <section >
+          <section className="heroContent">
             <div
-              className={`${styles.content} `}
+              className={`${styles.content} canvas-wrap`}
               style={{ backgroundImage: `url(${cowBanner.src})` }}
             >
               <div className={styles.info}>
@@ -40,10 +53,6 @@ const KeepBereiche = () => {
                 </div>
                 <Link href="/kontakt">Gleich anfrage</Link>
               </div>
-<<<<<<< HEAD
-=======
-              <Link href="/kontakt">Gleich anfragen</Link>
->>>>>>> fa5b283c20566b5177bfa76b3598533e3a9bebc4
             </div>
           </section>
         </TheHeaderSecond>
@@ -310,9 +319,8 @@ const KeepBereiche = () => {
           </div>
         </div>
       </div>
-      <h2 class={styles.weitere}>Weitere</h2>
-      <div>
-        <CowsSection />
+      <div className={styles.cowsWrap}>
+        <CowsSection subTitle="Weitere" />
       </div>
       <TheFooter />
     </div>

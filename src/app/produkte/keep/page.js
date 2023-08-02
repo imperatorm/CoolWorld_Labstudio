@@ -326,9 +326,8 @@ const Keep = () => {
           </div>
         </div>
       </div>
-      <h2 class={styles.weitere}>Weitere</h2>
       <div>
-        <ProducteSection />
+        <ProducteSection subTitle={"Weitere"} />
       </div>
       <TheFooter />
     </div>

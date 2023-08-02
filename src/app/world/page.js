@@ -1,18 +1,30 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from "./World.module.scss";
 import Image from "next/image";
 import TheFooter from "@/components/TheFooter/TheFooter";
 import homeParallax from "@/assets/images/home4.png";
 import TheHeaderSecond from "@/components/TheHeaderSecond/TheHeaderSecond";
-import girlMin from "@/assets/images/girl-min.png";
+import girlMin from "@/assets/images/girl-min3.png";
 import { TitleAnimation } from "@/components/TitleAnimation/TitleAnimation";
 import Truck from '@/components/Truck/Truck';
 import InfoSection from '@/components/InfoSection/InfoSection';
 import { infoWorld } from '@/date/date';
 import Link from 'next/link';
+import { Content } from "../../../public/js/content";
+import { preloadImages } from "../../../public/js/utils";
 const World = () => {
   const truckRef = useRef(null)
+  useEffect(()=> {
+    if(truckRef.current) {
+      const contentElems = [...document.querySelectorAll(".heroContent")];
+      contentElems.forEach((el) => new Content(el));
+      // preloadImages(".canvas-wrap").then(() =>
+      //   document.body.classList.remove("loading")
+      // );
+
+    }
+  },[])
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.scrollInfo}`}>
@@ -26,9 +38,9 @@ const World = () => {
         // style={{ backgroundImage: `url(${girlImg.src})` }}
       >
         <TheHeaderSecond>
-          <section>
+          <section className="heroContent">
             <div
-              className={`${styles.content}`}
+              className={`${styles.content} canvas-wrap`}
               style={{ backgroundImage: `url(${girlMin.src})` }}
             >
               <div className={styles.info}>

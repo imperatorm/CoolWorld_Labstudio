@@ -1,6 +1,6 @@
 .textFill {
-  height: 100vh;
   position: relative;
+
 
   & h3 {
     font-size: 300px;
@@ -43,10 +43,11 @@
   max-width: 414px;
   width: 100%;
   border-radius: 50%;
-  border: 5.4px var(--color-blue) solid;
   cursor: pointer;
   top: 50%;
   left: 50%;
+  height: 100%;
+  max-height: 423px;
 
   // transform: translate(-50%, -50%);
   & img {
@@ -54,8 +55,8 @@
     object-fit: cover;
     width: 100%;
     border-radius: 50%;
-    max-height: 413px;
-    max-width: 412px;
+    height: inherit;
+    border: 5.4px solid var(--color-blue);
 
   }
 
@@ -68,15 +69,15 @@
   position: absolute;
   top: 0;
   border-radius: 50%;
-  background-color: rgb(78 191 236 / 64%);
+  background-color: rgba(78, 191, 236, 0.64);
   height: 100%;
-  max-width: 414px;
+  max-width: 420px;
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
   height: 100%;
-
   animation: rotating 12s linear infinite;
+
   & text {
     fill: white;
     font-size: 11px;
@@ -114,6 +115,7 @@
   &:hover {
     color: var(--color-blue);
   }
+
   &::before {
     position: absolute;
     content: "";
@@ -140,4 +142,12 @@
   width: 100%;
   height: 60vh;
   top: -10%;
+}
+.subTitle {
+  font-size: 37.8px;
+    line-height: 42px;
+    font-weight: bold;
+    text-align: center;
+   margin-bottom: 122px;
+
 }
