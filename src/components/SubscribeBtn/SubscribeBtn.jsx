@@ -5,9 +5,12 @@ import Link from "next/link";
 import EmailJson from "./email.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 import useHover from "@/hooks/useHover";
-const SubscribeBtn = () => {
+const SubscribeBtn = ({
+  handleHoverEnter = (f) => () => f(),
+  handleHoverLeave = (f) => () => f(),
+}) => {
   const [send, setSend] = useState(false);
-  const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
+  const {isHovered, handleMouseEnter, handleMouseLeave} = useHover();
   const emailRef = useRef();
   useEffect(() => {
     if (send) {
@@ -17,6 +20,7 @@ const SubscribeBtn = () => {
     }
   }, [send]);
   useEffect(() => {
+    
     if (isHovered) {
       emailRef?.current?.play();
     } else {
@@ -24,30 +28,28 @@ const SubscribeBtn = () => {
     }
   }, [isHovered]);
   return (
-  
-      <Link
-        href={"mailto:example@example.com"}
-        className={styles.linkSubs}
-        onClick={() => setSend(true)}
+    <Link
+      href={"mailto:example@example.com"}
+      className={styles.linkSubs}
+      onClick={() => setSend(true)}
+    >
+      <span>Schreiben Sie uns eine E-Mail.</span>
+      <div
+        className={send ? styles.send : ""}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <span>Schreiben Sie uns eine E-Mail.</span>
-        <div
-          className={send ? styles.send : ""}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <Player
-            src={EmailJson}
-            ref={emailRef}
-            autoplay={false}
-            // loop={true}
-            keepLastFrame={true}
-            controls={true}
-            style={{ width: "40px" }}
-          ></Player>
-        </div>
-      </Link>
-    
+        <Player
+          src={EmailJson}
+          ref={emailRef}
+          autoplay={false}
+          // loop={true}
+          keepLastFrame={true}
+          controls={true}
+          style={{ width: "40px" }}
+        ></Player>
+      </div>
+    </Link>
   );
 };
 

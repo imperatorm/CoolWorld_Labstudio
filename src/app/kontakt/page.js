@@ -1,15 +1,20 @@
 "use client";
 import TheFooter from "@/components/TheFooter/TheFooter";
 import styles from "./Kontakt.module.scss";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { LongArrow } from "@/components/Icons/Icons";
 import Link from "next/link";
 import SubscribeBtn from "@/components/SubscribeBtn/SubscribeBtn";
 import TheHeader from "@/components/TheHeader/TheHeader";
+import useHover from "@/hooks/useHover";
+
 
 
 const Kontakt = () => {
    const [scrollX, setScrollX] = useState(0);
+   const { isHovered, handleMouseEnter, handleMouseLeave } = useHover();
+   const [arrowMove,setArrowMove] = useState()
+   const arrowRef = useRef(false)
 
    useEffect(() => {
      const handleScroll = () => {
@@ -23,6 +28,21 @@ const Kontakt = () => {
        window.removeEventListener("scroll", handleScroll);
      };
    }, []);
+
+   useEffect(()=> {
+    setArrowMove(isHovered);
+   },[isHovered])
+  //  const handleHover = (isHovered) => {
+  //   if (isHovered) {
+      
+  //      arrowRef?.current?.style="transform: translateX(-30%)";
+  //   } else {
+  //    arrowRef?.current?.style="transform: translateX(-40%)";
+  //   }
+  //  };
+
+
+
   return (
     <div>
       <TheHeader />
@@ -40,10 +60,18 @@ const Kontakt = () => {
           </h2>
         </div>
         <div className={`${styles.schrebin}`}>
-          <LongArrow
-            style={{ transform: `translateX(${Math.abs(scrollX / 500)}px)` }}
-          />
-          <SubscribeBtn />
+          <div className={styles.arrowWrap}>
+            <LongArrow
+              style={
+                arrowMove
+                  ? { transform: "translateX(-30%)" }
+                  : { transform: "translateX(-40%)" }
+              }
+            />
+          </div>
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <SubscribeBtn />
+          </div>
           {/* <button>Schreiben Sie uns eine E-Mail.</button> */}
         </div>
         <div className={`main-container`}>
@@ -73,7 +101,9 @@ const Kontakt = () => {
                 </Link>
               </li>
             </ul>
-            <Link className={styles.telLink} href={"tel:+43 676 560 62 22"}>Rufen Sie uns an</Link>
+            <Link className={styles.telLink} href={"tel:+43 676 560 62 22"}>
+              Rufen Sie uns an
+            </Link>
             <button>Finden Sie uns bei Goolge Maps</button>
           </div>
         </div>

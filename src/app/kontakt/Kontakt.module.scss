@@ -131,3 +131,10 @@
     margin-bottom: 30px;
     text-align: center;
 }
+.arrowWrap {
+  position: relative;
+  svg {
+    position: absolute;
+    transition: var(--transition);
+  }
+}

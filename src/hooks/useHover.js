@@ -17,7 +17,7 @@ const useHover = () => {
     };
   }, []);
 
-  return [isHovered, handleMouseEnter, handleMouseLeave];
+  return {isHovered, handleMouseEnter, handleMouseLeave};
 };
 
 export default useHover;

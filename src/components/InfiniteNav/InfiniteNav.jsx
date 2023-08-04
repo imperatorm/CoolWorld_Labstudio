@@ -25,7 +25,7 @@ const InfiniteLoop = ({ text }) => (
 
 const InfiniteNav = ({ links, handleActive }) => {
   const pathname = usePathname();
-  const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
+  const {isHovered, handleMouseEnter, handleMouseLeave} = useHover();
   const closeRef = useRef()
   useEffect(()=> {
     if(isHovered) {

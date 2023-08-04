@@ -38,7 +38,7 @@ const LanguageChoose = ({modelStyle=false}) => {
     : { color: "var(--color-blue)" };
 
   const [langChoose, setLangChoose] = useState(langData);
-  const [isHovered, handleMouseEnter, handleMouseLeave] = useHover();
+  const {isHovered, handleMouseEnter, handleMouseLeave} = useHover();
   const [tabHover,setTabHover] = useState(3);
   const size = useWindowSize();
   const handleClick = useCallback((id) => {
