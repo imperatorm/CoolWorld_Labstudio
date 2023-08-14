@@ -2,16 +2,6 @@
 
   position: relative;
 
-  @media only screen and (max-width:1200px) {
-    zoom: .7;
-  }
-
-  @media only screen and (max-width:768px) {
-    zoom: 0.4;
-  }
-  @media only screen and (max-width:500px) {
-    zoom: 0.3;
-  }
 
   & h3 {
     font-size: 300px;
@@ -32,7 +22,8 @@
     background-position-y: 300px;
 
     @media only screen and (max-width:1200px) {
-      background-position-y: 00px;
+      font-size: 200px;
+      line-height: 190px;
     }
 
     // transition: background-position-y 3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
@@ -52,7 +43,7 @@
 }
 
 .imgWrap3 {
-  transform: translate(-90%, -50%);
+  transform: translate(-120%, -50%);
 }
 
 .imgWrap {
@@ -74,6 +65,14 @@
     min-height: 413px;
     border: 5.4px var(--color-blue) solid;
 
+    @media only screen and (max-width:1200px) {
+      min-height: 281px;
+    }
+
+  }
+
+  @media only screen and (max-width:1200px) {
+    max-width: 281px;
   }
 
   &:hover svg {
@@ -161,6 +160,10 @@
   height: 60vh;
   top: -10%;
   overflow: hidden;
+
+  @media only screen and (max-width:1200px) {
+    top: -30%;
+  }
 }
 
 .subTitle {

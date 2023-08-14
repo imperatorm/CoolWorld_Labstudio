@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import SplitText from "gsap-trial/SplitText";
 import maskImg from "./world.svg";
-import cursorPlay from "@/assets/images/cursorPlay.png";
 gsap.registerPlugin(ScrollTrigger);
 gsap.config({ trialWarn: false });
 import styles from "./VideoScroll.module.scss";
@@ -13,12 +12,12 @@ const VideoScroll = () => {
   const maskRef = useRef(null);
   const elementRef = useRef(null);
   const textRef = useRef(null);
-
   useEffect(() => {
     const maskEl = maskRef.current;
     if (maskEl) {
+      
       const charts = [...document.querySelectorAll(".split-chars")];
-      gsap.set(maskEl, { maskImage: `url(${maskImg.src})`});
+      gsap.set(maskEl, { maskImage: `url(${maskImg.src})`,maskSize:"36%" });
       gsap.set(elementRef.current, { y: 0, x: 0 });
       gsap
         .timeline({
@@ -35,8 +34,13 @@ const VideoScroll = () => {
             //  markers: true,
           },
         })
-        .to(maskEl, { maskSize: "60%",scrub: 1, duration: 5, ease: Power2.in })
-        .to(maskEl, { maskSize: "100%",scrub: 1, duration: 5, ease: Power2.in })
+        .to(maskEl, { maskSize: "60%", scrub: 1, duration: 5, ease: Power2.in })
+        .to(maskEl, {
+          maskSize: "100%",
+          scrub: 1,
+          duration: 5,
+          ease: Power2.in,
+        })
         .to(maskEl, {
           maskImage: "none",
           duration: 5,
@@ -94,16 +98,10 @@ const VideoScroll = () => {
         <div
           className={styles.mask}
           ref={maskRef}
-          style={{ maskImage: `url(${maskImg.src})` }}
+          style={{ maskImage: `url(${maskImg.src})`,maskSize:"20%" }}
         >
           {/* <Image src={worldImg} /> */}
-          <video
-            className={styles.video}
-            autoPlay
-            muted
-            loop
-            style={{ cursor: `url(${cursorPlay.src}), auto` }}
-          >
+          <video className={styles.video} autoPlay muted loop>
             <source src={"./111.mp4"} type="video/mp4" />
           </video>
           <h3

@@ -7,17 +7,17 @@ import useWindowSize from "@/hooks/useViewport";
 
 const langData = [
   {
-    id: Math.random(),
+    id: 0,
     name: "EN",
     isActive: false,
   },
   {
-    id: Math.random(),
+    id: 1,
     name: "IT",
     isActive: false,
   },
   {
-    id: Math.random(),
+    id: 2,
     name: "DE",
     isActive: true,
   },
@@ -39,10 +39,11 @@ const LanguageChoose = ({modelStyle=false}) => {
 
   const [langChoose, setLangChoose] = useState(langData);
   const {isHovered, handleMouseEnter, handleMouseLeave} = useHover();
+  const [inActive,setInActive] = useState(false)
   const [tabHover,setTabHover] = useState(3);
-  const size = useWindowSize();
+  
   const handleClick = useCallback((id) => {
-
+    
     const newLang = langChoose.map((item) => {
       if (item.id === id) {
         return { ...item, isActive: true };
@@ -63,40 +64,49 @@ const LanguageChoose = ({modelStyle=false}) => {
         <div
           className={isHovered ? styles.langOther : styles.langOtherNoActive}
         >
-          {langChoose.map((lang, idx) => {
-            if (!lang.isActive) {
-              return (
-                <p
-                  className={styles.langItemOther}
-                  onClick={() => {
-                    handleClick(lang.id)
-                    // setTabHover(3);
-                  }}
-                  key={lang.id}
-                  onMouseEnter={() => setTabHover(idx)}
-                  style={idx === tabHover ? colorStyle : null}
-                  onMouseLeave={() => setTabHover(3)}
-                >
-                  {lang.name}
-                </p>
-              );
-            }
-          })}
+          {langChoose
+            .filter((item) => !item.isActive)
+            .map((lang, idx) => {
+              if (!lang.isActive) {
+                return (
+                  <p
+                    className={styles.langItemOther}
+                    onClick={() => {
+                      handleClick(lang.id);
+                      setTabHover(3);
+                      handleMouseLeave();
+                      setInActive(!inActive);
+                    }}
+                    key={lang.id}
+                    onMouseEnter={() => {
+                      setTabHover(idx);
+                    }}
+                    style={idx === tabHover ? colorStyle : null}
+                    onMouseLeave={() => setTabHover(3)}
+                  >
+                    {lang.name}
+                  </p>
+                );
+              }
+            })}
         </div>
         {langChoose.map((lang) => {
           if (lang.isActive) {
             return (
               <p
-                className={`${styles.langItem} `}
+                className={`${inActive ? styles.inActive : null} ${
+                  styles.langItem
+                } `}
                 onMouseEnter={() => {
                   handleMouseEnter();
                   setTabHover(2);
+                  setInActive(!inActive);
                 }}
                 onMouseLeave={() => setTabHover(3)}
                 style={2 === tabHover ? colorStyle : null}
                 onClick={() => {
-                  handleClick(lang.id)
-                  handleMouseEnter()
+                  handleClick(lang.id);
+                  handleMouseEnter();
                 }}
                 key={lang.id}
               >
@@ -107,7 +117,7 @@ const LanguageChoose = ({modelStyle=false}) => {
         })}
         <div
           className={styles.tab}
-          style={idHover[tabHover]}
+          style={isHovered ? idHover[tabHover] : idHover[3]}
         ></div>
       </div>
     </div>

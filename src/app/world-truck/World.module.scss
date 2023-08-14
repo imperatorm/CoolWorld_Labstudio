@@ -13,8 +13,12 @@
 }
 
 .keepInfo {
-
   display: flex;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: flex-start;
+  padding-top: 67px;
+  padding-left: 250px;
 }
 
 .secondTitle {

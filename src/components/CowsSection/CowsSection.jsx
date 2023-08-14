@@ -26,7 +26,7 @@ const CowsSection = ({ bottom, subTitle="" }) => {
       gsap.set(contents, { autoAlpha: 0, x: 500 });
       gsap.set(".textWaves", {
         backgroundImage: `url(${shapeImg.src})`,
-        backgroundPositionY: "-300%",
+        backgroundPositionY: "500px",
       });
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -54,7 +54,7 @@ const CowsSection = ({ bottom, subTitle="" }) => {
         .to(
           ".textWaves",
           {
-            backgroundPositionY: "-50%",
+            backgroundPositionY: "300px",
             // backgroundPositionX: "500px",
             duration: 5,
             ease: Power0.easeNone,
@@ -67,7 +67,7 @@ const CowsSection = ({ bottom, subTitle="" }) => {
         .to(
           ".textWaves",
           {
-            backgroundPositionY: "-5%",
+            backgroundPositionY: "100px",
             // backgroundPositionX: "800px",
             duration: 10,
             ease: Power0.easeNone,

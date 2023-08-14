@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./TheFooter.module.scss";
 import Image from "next/image";
-import footerImg from "@/assets/images/footer-bg.svg";
+import footerImg1 from "@/assets/images/footer-bg-1.png";
 import Link from "next/link";
 const TheFooter = () => {
   return (
     <footer className={styles.footerWrap}>
-      <div className={styles.imgWrap}>
-        <Image src={footerImg} width={1920} height={936} alt={"footer-bg"} />
+      <div className={styles.imgWrap} style={{backgroundImage:`url(${footerImg1.src})`}}>
+        {/* <Image src={footerImg1} alt={"footer-bg"} /> */}
       </div>
       <div className={styles.footerContent}>
         <div className={styles.footerContent}>

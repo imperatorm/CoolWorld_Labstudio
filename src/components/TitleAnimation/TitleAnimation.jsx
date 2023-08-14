@@ -23,9 +23,9 @@ const TitleAnimation = ({ children, containerName = "container" }) => {
     from: { opacity: 0, x: 80, height: 0 },
   });
   return (
-    <div className={styles[containerName]}>
+    <>
       <Trail nameClass={"trailsText"} trail={trail} items={items} />
-    </div>
+    </>
   );
 };
 

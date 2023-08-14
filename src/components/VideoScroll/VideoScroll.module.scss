@@ -6,7 +6,7 @@
   // mask-image: image(url("./world.svg"));
   mask-position: center center;
   mask-repeat: no-repeat;
-  mask-size: 34%;
+  // mask-size: 34%;
   // top: 0 !important;
   z-index: 1;
   height: 100vh;
@@ -14,6 +14,8 @@
 
 .video {
   width: 100vw;
+  object-fit: fill;
+  height: 100vh;
 }
 
 .videoBannerText {
@@ -34,12 +36,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-  color: var(--color-blue);
-  font-size: 70px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 79px;
-  text-align: center;
   background-color: var(--color-milk);
   margin-top: -15px;
   min-height: 100%;
@@ -47,11 +43,34 @@
   opacity: 1;
   max-width: 1200px;
 
+
   & h2 {
     padding: 100px 135px;
     width: 100%;
     margin: 0 auto;
     max-width: 1410px;
+    color: var(--color-blue);
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 79px;
+
+    @media only screen and (max-width:1024px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @media only screen and (max-width:768px) {
+      font-size: 40px;
+      line-height: 50px;
+      padding: 80px 100px;
+    }
+
+    @media only screen and (max-width: 633px) {
+      font-size: 32px;
+      line-height: 44px;
+      padding: 80px 50px;
+    }
   }
 }
 
@@ -69,6 +88,10 @@
 .splitLines {
   display: flex;
   gap: 40px;
+
+  @media only screen and (max-width:500px) {
+    gap: 20px;
+  }
 }
 
 .splitWords {
@@ -82,4 +105,16 @@
   line-height: 90px;
   text-align: center;
   color: var(--color-milk);
+
+  @media only screen and (max-width:1024px) {
+    font-size: 70px;
+  }
+
+  @media only screen and (max-width:768px) {
+    font-size: 50px;
+  }
+
+  @media only screen and (max-width:500px) {
+    font-size: 35px;
+  }
 }
